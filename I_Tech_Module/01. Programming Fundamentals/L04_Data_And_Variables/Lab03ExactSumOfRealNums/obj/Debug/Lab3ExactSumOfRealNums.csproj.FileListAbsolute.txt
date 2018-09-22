@@ -1,0 +1,7 @@
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\Lab3ExactSumOfRealNums\bin\Debug\Lab3ExactSumOfRealNums.exe.config
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\Lab3ExactSumOfRealNums\bin\Debug\Lab3ExactSumOfRealNums.exe
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\Lab3ExactSumOfRealNums\bin\Debug\Lab3ExactSumOfRealNums.pdb
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\Lab3ExactSumOfRealNums\obj\Debug\Lab3ExactSumOfRealNums.csprojResolveAssemblyReference.cache
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\Lab3ExactSumOfRealNums\obj\Debug\Lab3ExactSumOfRealNums.csproj.CoreCompileInputs.cache
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\Lab3ExactSumOfRealNums\obj\Debug\Lab3ExactSumOfRealNums.exe
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\Lab3ExactSumOfRealNums\obj\Debug\Lab3ExactSumOfRealNums.pdb

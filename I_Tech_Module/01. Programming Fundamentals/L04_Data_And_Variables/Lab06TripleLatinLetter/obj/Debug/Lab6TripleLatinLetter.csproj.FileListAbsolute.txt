@@ -1,0 +1,6 @@
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\Lab6TripleLatinLetter\bin\Debug\Lab6TripleLatinLetter.exe.config
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\Lab6TripleLatinLetter\bin\Debug\Lab6TripleLatinLetter.exe
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\Lab6TripleLatinLetter\bin\Debug\Lab6TripleLatinLetter.pdb
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\Lab6TripleLatinLetter\obj\Debug\Lab6TripleLatinLetter.csproj.CoreCompileInputs.cache
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\Lab6TripleLatinLetter\obj\Debug\Lab6TripleLatinLetter.exe
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\Lab6TripleLatinLetter\obj\Debug\Lab6TripleLatinLetter.pdb

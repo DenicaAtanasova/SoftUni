@@ -1,0 +1,7 @@
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\Lab1CenturiesToMinutes\bin\Debug\Lab1CenturiesToMinutes.exe.config
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\Lab1CenturiesToMinutes\bin\Debug\Lab1CenturiesToMinutes.exe
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\Lab1CenturiesToMinutes\bin\Debug\Lab1CenturiesToMinutes.pdb
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\Lab1CenturiesToMinutes\obj\Debug\Lab1CenturiesToMinutes.csprojResolveAssemblyReference.cache
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\Lab1CenturiesToMinutes\obj\Debug\Lab1CenturiesToMinutes.csproj.CoreCompileInputs.cache
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\Lab1CenturiesToMinutes\obj\Debug\Lab1CenturiesToMinutes.exe
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\Lab1CenturiesToMinutes\obj\Debug\Lab1CenturiesToMinutes.pdb
