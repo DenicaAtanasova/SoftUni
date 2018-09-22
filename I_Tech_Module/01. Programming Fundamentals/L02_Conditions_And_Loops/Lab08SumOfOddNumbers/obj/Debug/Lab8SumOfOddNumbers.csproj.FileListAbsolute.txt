@@ -1,0 +1,7 @@
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\Lab8SumOfOddNumbers\bin\Debug\Lab8SumOfOddNumbers.exe.config
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\Lab8SumOfOddNumbers\bin\Debug\Lab8SumOfOddNumbers.exe
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\Lab8SumOfOddNumbers\bin\Debug\Lab8SumOfOddNumbers.pdb
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\Lab8SumOfOddNumbers\obj\Debug\Lab8SumOfOddNumbers.csprojResolveAssemblyReference.cache
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\Lab8SumOfOddNumbers\obj\Debug\Lab8SumOfOddNumbers.csproj.CoreCompileInputs.cache
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\Lab8SumOfOddNumbers\obj\Debug\Lab8SumOfOddNumbers.exe
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\Lab8SumOfOddNumbers\obj\Debug\Lab8SumOfOddNumbers.pdb

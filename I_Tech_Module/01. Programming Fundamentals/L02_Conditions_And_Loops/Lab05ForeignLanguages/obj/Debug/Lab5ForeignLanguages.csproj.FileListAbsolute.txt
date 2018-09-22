@@ -1,0 +1,7 @@
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\Lab5ForeignLanguages\bin\Debug\Lab5ForeignLanguages.exe.config
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\Lab5ForeignLanguages\bin\Debug\Lab5ForeignLanguages.exe
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\Lab5ForeignLanguages\bin\Debug\Lab5ForeignLanguages.pdb
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\Lab5ForeignLanguages\obj\Debug\Lab5ForeignLanguages.csprojResolveAssemblyReference.cache
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\Lab5ForeignLanguages\obj\Debug\Lab5ForeignLanguages.csproj.CoreCompileInputs.cache
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\Lab5ForeignLanguages\obj\Debug\Lab5ForeignLanguages.exe
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\Lab5ForeignLanguages\obj\Debug\Lab5ForeignLanguages.pdb
