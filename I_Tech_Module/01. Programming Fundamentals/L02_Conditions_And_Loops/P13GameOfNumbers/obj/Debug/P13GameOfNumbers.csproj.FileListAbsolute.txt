@@ -1,0 +1,7 @@
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\P13GameOfNumbers\bin\Debug\P13GameOfNumbers.exe.config
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\P13GameOfNumbers\bin\Debug\P13GameOfNumbers.exe
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\P13GameOfNumbers\bin\Debug\P13GameOfNumbers.pdb
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\P13GameOfNumbers\obj\Debug\P13GameOfNumbers.csproj.CoreCompileInputs.cache
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\P13GameOfNumbers\obj\Debug\P13GameOfNumbers.exe
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\P13GameOfNumbers\obj\Debug\P13GameOfNumbers.pdb
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\P13GameOfNumbers\obj\Debug\P13GameOfNumbers.csprojResolveAssemblyReference.cache
