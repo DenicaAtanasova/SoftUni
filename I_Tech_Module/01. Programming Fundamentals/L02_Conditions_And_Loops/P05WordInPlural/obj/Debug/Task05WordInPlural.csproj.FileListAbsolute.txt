@@ -1,0 +1,7 @@
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\Task05WordInPlural\bin\Debug\Task05WordInPlural.exe.config
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\Task05WordInPlural\bin\Debug\Task05WordInPlural.exe
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\Task05WordInPlural\bin\Debug\Task05WordInPlural.pdb
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\Task05WordInPlural\obj\Debug\Task05WordInPlural.csproj.CoreCompileInputs.cache
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\Task05WordInPlural\obj\Debug\Task05WordInPlural.exe
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\Task05WordInPlural\obj\Debug\Task05WordInPlural.pdb
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\Task05WordInPlural\obj\Debug\Task05WordInPlural.csprojResolveAssemblyReference.cache

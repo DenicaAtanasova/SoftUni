@@ -1,0 +1,7 @@
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\Task06IntervalOfNumbers\bin\Debug\Task06IntervalOfNumbers.exe.config
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\Task06IntervalOfNumbers\bin\Debug\Task06IntervalOfNumbers.exe
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\Task06IntervalOfNumbers\bin\Debug\Task06IntervalOfNumbers.pdb
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\Task06IntervalOfNumbers\obj\Debug\Task06IntervalOfNumbers.csprojResolveAssemblyReference.cache
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\Task06IntervalOfNumbers\obj\Debug\Task06IntervalOfNumbers.csproj.CoreCompileInputs.cache
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\Task06IntervalOfNumbers\obj\Debug\Task06IntervalOfNumbers.exe
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\Task06IntervalOfNumbers\obj\Debug\Task06IntervalOfNumbers.pdb

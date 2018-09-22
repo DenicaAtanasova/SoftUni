@@ -1,0 +1,6 @@
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\Task07CaloriesCounter\bin\Debug\Task07CaloriesCounter.exe.config
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\Task07CaloriesCounter\bin\Debug\Task07CaloriesCounter.exe
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\Task07CaloriesCounter\bin\Debug\Task07CaloriesCounter.pdb
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\Task07CaloriesCounter\obj\Debug\Task07CaloriesCounter.csproj.CoreCompileInputs.cache
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\Task07CaloriesCounter\obj\Debug\Task07CaloriesCounter.exe
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\Task07CaloriesCounter\obj\Debug\Task07CaloriesCounter.pdb

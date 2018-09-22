@@ -1,0 +1,6 @@
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\P09CountTheIntegers\bin\Debug\P09CountTheIntegers.exe.config
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\P09CountTheIntegers\bin\Debug\P09CountTheIntegers.exe
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\P09CountTheIntegers\bin\Debug\P09CountTheIntegers.pdb
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\P09CountTheIntegers\obj\Debug\P09CountTheIntegers.csproj.CoreCompileInputs.cache
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\P09CountTheIntegers\obj\Debug\P09CountTheIntegers.exe
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\P09CountTheIntegers\obj\Debug\P09CountTheIntegers.pdb

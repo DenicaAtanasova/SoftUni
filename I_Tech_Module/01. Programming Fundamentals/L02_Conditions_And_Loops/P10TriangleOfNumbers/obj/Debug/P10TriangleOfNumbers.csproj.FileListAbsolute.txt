@@ -1,0 +1,7 @@
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\P10TriangleOfNumbers\bin\Debug\P10TriangleOfNumbers.exe.config
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\P10TriangleOfNumbers\bin\Debug\P10TriangleOfNumbers.exe
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\P10TriangleOfNumbers\bin\Debug\P10TriangleOfNumbers.pdb
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\P10TriangleOfNumbers\obj\Debug\P10TriangleOfNumbers.csprojResolveAssemblyReference.cache
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\P10TriangleOfNumbers\obj\Debug\P10TriangleOfNumbers.csproj.CoreCompileInputs.cache
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\P10TriangleOfNumbers\obj\Debug\P10TriangleOfNumbers.exe
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\P10TriangleOfNumbers\obj\Debug\P10TriangleOfNumbers.pdb

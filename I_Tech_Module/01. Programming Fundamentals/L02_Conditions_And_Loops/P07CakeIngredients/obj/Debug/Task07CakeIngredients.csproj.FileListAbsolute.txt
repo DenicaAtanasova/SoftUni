@@ -1,0 +1,6 @@
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\Task07CakeIngredients\bin\Debug\Task07CakeIngredients.exe.config
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\Task07CakeIngredients\bin\Debug\Task07CakeIngredients.exe
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\Task07CakeIngredients\bin\Debug\Task07CakeIngredients.pdb
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\Task07CakeIngredients\obj\Debug\Task07CakeIngredients.csproj.CoreCompileInputs.cache
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\Task07CakeIngredients\obj\Debug\Task07CakeIngredients.exe
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\Task07CakeIngredients\obj\Debug\Task07CakeIngredients.pdb
