@@ -1,0 +1,6 @@
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\P07ExchangeVarValues\bin\Debug\P07ExchangeVarValues.exe.config
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\P07ExchangeVarValues\bin\Debug\P07ExchangeVarValues.exe
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\P07ExchangeVarValues\bin\Debug\P07ExchangeVarValues.pdb
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\P07ExchangeVarValues\obj\Debug\P07ExchangeVarValues.csproj.CoreCompileInputs.cache
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\P07ExchangeVarValues\obj\Debug\P07ExchangeVarValues.exe
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\P07ExchangeVarValues\obj\Debug\P07ExchangeVarValues.pdb

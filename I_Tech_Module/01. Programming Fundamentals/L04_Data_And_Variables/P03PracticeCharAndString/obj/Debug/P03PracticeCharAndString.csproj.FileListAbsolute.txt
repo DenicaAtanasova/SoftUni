@@ -1,0 +1,6 @@
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\P03PracticeCharAndString\bin\Debug\P03PracticeCharAndString.exe.config
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\P03PracticeCharAndString\bin\Debug\P03PracticeCharAndString.exe
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\P03PracticeCharAndString\bin\Debug\P03PracticeCharAndString.pdb
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\P03PracticeCharAndString\obj\Debug\P03PracticeCharAndString.csproj.CoreCompileInputs.cache
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\P03PracticeCharAndString\obj\Debug\P03PracticeCharAndString.exe
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\P03PracticeCharAndString\obj\Debug\P03PracticeCharAndString.pdb
