@@ -1,0 +1,7 @@
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Exercises\CSharpBasicSyntax\EmployeeData\bin\Debug\EmployeeData.exe.config
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Exercises\CSharpBasicSyntax\EmployeeData\bin\Debug\EmployeeData.exe
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Exercises\CSharpBasicSyntax\EmployeeData\bin\Debug\EmployeeData.pdb
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Exercises\CSharpBasicSyntax\EmployeeData\obj\Debug\Task3EmployeeData.csprojResolveAssemblyReference.cache
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Exercises\CSharpBasicSyntax\EmployeeData\obj\Debug\Task3EmployeeData.csproj.CoreCompileInputs.cache
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Exercises\CSharpBasicSyntax\EmployeeData\obj\Debug\EmployeeData.exe
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Exercises\CSharpBasicSyntax\EmployeeData\obj\Debug\EmployeeData.pdb

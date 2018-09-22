@@ -1,0 +1,7 @@
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Exercises\CSharpBasicSyntax\Greeting\bin\Debug\Greeting.exe.config
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Exercises\CSharpBasicSyntax\Greeting\bin\Debug\Greeting.exe
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Exercises\CSharpBasicSyntax\Greeting\bin\Debug\Greeting.pdb
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Exercises\CSharpBasicSyntax\Greeting\obj\Debug\Greeting.csprojResolveAssemblyReference.cache
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Exercises\CSharpBasicSyntax\Greeting\obj\Debug\Greeting.csproj.CoreCompileInputs.cache
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Exercises\CSharpBasicSyntax\Greeting\obj\Debug\Greeting.exe
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Exercises\CSharpBasicSyntax\Greeting\obj\Debug\Greeting.pdb
