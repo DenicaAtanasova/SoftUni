@@ -1,0 +1,7 @@
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Exercises\CSharpBasicSyntax\Task1DebitCardNumber\bin\Debug\Task1DebitCardNumber.exe.config
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Exercises\CSharpBasicSyntax\Task1DebitCardNumber\bin\Debug\Task1DebitCardNumber.exe
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Exercises\CSharpBasicSyntax\Task1DebitCardNumber\bin\Debug\Task1DebitCardNumber.pdb
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Exercises\CSharpBasicSyntax\Task1DebitCardNumber\obj\Debug\Task1DebitCardNumber.csprojResolveAssemblyReference.cache
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Exercises\CSharpBasicSyntax\Task1DebitCardNumber\obj\Debug\Task1DebitCardNumber.csproj.CoreCompileInputs.cache
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Exercises\CSharpBasicSyntax\Task1DebitCardNumber\obj\Debug\Task1DebitCardNumber.exe
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Exercises\CSharpBasicSyntax\Task1DebitCardNumber\obj\Debug\Task1DebitCardNumber.pdb

@@ -1,0 +1,6 @@
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Exercises\CSharpBasicSyntax\Task2RectangleArea\bin\Debug\Task2RectangleArea.exe.config
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Exercises\CSharpBasicSyntax\Task2RectangleArea\bin\Debug\Task2RectangleArea.exe
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Exercises\CSharpBasicSyntax\Task2RectangleArea\bin\Debug\Task2RectangleArea.pdb
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Exercises\CSharpBasicSyntax\Task2RectangleArea\obj\Debug\Task2RectangleArea.csproj.CoreCompileInputs.cache
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Exercises\CSharpBasicSyntax\Task2RectangleArea\obj\Debug\Task2RectangleArea.exe
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Exercises\CSharpBasicSyntax\Task2RectangleArea\obj\Debug\Task2RectangleArea.pdb
