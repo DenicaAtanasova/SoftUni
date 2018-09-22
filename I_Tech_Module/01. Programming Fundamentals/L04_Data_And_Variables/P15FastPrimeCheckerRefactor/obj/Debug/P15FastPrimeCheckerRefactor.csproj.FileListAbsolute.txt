@@ -1,0 +1,6 @@
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\P15FastPrimeCheckerRefactor\bin\Debug\P15FastPrimeCheckerRefactor.exe.config
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\P15FastPrimeCheckerRefactor\bin\Debug\P15FastPrimeCheckerRefactor.exe
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\P15FastPrimeCheckerRefactor\bin\Debug\P15FastPrimeCheckerRefactor.pdb
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\P15FastPrimeCheckerRefactor\obj\Debug\P15FastPrimeCheckerRefactor.csproj.CoreCompileInputs.cache
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\P15FastPrimeCheckerRefactor\obj\Debug\P15FastPrimeCheckerRefactor.exe
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\P15FastPrimeCheckerRefactor\obj\Debug\P15FastPrimeCheckerRefactor.pdb

@@ -1,0 +1,7 @@
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\P14IntegerToHexAndBinery\bin\Debug\P14IntegerToHexAndBinery.exe.config
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\P14IntegerToHexAndBinery\bin\Debug\P14IntegerToHexAndBinery.exe
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\P14IntegerToHexAndBinery\bin\Debug\P14IntegerToHexAndBinery.pdb
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\P14IntegerToHexAndBinery\obj\Debug\P14IntegerToHexAndBinery.csprojResolveAssemblyReference.cache
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\P14IntegerToHexAndBinery\obj\Debug\P14IntegerToHexAndBinery.csproj.CoreCompileInputs.cache
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\P14IntegerToHexAndBinery\obj\Debug\P14IntegerToHexAndBinery.exe
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\P14IntegerToHexAndBinery\obj\Debug\P14IntegerToHexAndBinery.pdb

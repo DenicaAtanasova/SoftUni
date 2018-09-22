@@ -1,0 +1,6 @@
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\P08EmployeeData\bin\Debug\P08EmployeeData.exe.config
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\P08EmployeeData\bin\Debug\P08EmployeeData.exe
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\P08EmployeeData\bin\Debug\P08EmployeeData.pdb
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\P08EmployeeData\obj\Debug\P08EmployeeData.csproj.CoreCompileInputs.cache
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\P08EmployeeData\obj\Debug\P08EmployeeData.exe
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\P08EmployeeData\obj\Debug\P08EmployeeData.pdb
