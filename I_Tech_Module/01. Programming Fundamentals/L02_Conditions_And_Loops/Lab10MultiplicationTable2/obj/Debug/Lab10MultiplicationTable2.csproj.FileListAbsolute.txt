@@ -1,0 +1,6 @@
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\Lab10MultiplicationTable2\bin\Debug\Lab10MultiplicationTable2.exe.config
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\Lab10MultiplicationTable2\bin\Debug\Lab10MultiplicationTable2.exe
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\Lab10MultiplicationTable2\bin\Debug\Lab10MultiplicationTable2.pdb
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\Lab10MultiplicationTable2\obj\Debug\Lab10MultiplicationTable2.csproj.CoreCompileInputs.cache
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\Lab10MultiplicationTable2\obj\Debug\Lab10MultiplicationTable2.exe
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\Lab10MultiplicationTable2\obj\Debug\Lab10MultiplicationTable2.pdb
