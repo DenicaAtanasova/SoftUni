@@ -1,0 +1,6 @@
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\P18DifferentIntegersSize\bin\Debug\P18DifferentIntegersSize.exe.config
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\P18DifferentIntegersSize\bin\Debug\P18DifferentIntegersSize.exe
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\P18DifferentIntegersSize\bin\Debug\P18DifferentIntegersSize.pdb
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\P18DifferentIntegersSize\obj\Debug\P18DifferentIntegersSize.csproj.CoreCompileInputs.cache
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\P18DifferentIntegersSize\obj\Debug\P18DifferentIntegersSize.exe
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\P18DifferentIntegersSize\obj\Debug\P18DifferentIntegersSize.pdb
