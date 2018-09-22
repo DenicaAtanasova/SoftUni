@@ -1,0 +1,7 @@
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\Lab9RefactorSpecialNums\bin\Debug\Lab9RefactorSpecialNums.exe.config
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\Lab9RefactorSpecialNums\bin\Debug\Lab9RefactorSpecialNums.exe
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\Lab9RefactorSpecialNums\bin\Debug\Lab9RefactorSpecialNums.pdb
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\Lab9RefactorSpecialNums\obj\Debug\Lab9RefactorSpecialNums.csprojResolveAssemblyReference.cache
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\Lab9RefactorSpecialNums\obj\Debug\Lab9RefactorSpecialNums.csproj.CoreCompileInputs.cache
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\Lab9RefactorSpecialNums\obj\Debug\Lab9RefactorSpecialNums.exe
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\Lab9RefactorSpecialNums\obj\Debug\Lab9RefactorSpecialNums.pdb
