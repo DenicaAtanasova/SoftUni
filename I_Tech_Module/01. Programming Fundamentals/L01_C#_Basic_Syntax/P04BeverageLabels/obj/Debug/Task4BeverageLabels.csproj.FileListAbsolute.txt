@@ -1,0 +1,6 @@
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Exercises\CSharpBasicSyntax\Task4BeverageLabels\bin\Debug\Task4BeverageLabels.exe.config
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Exercises\CSharpBasicSyntax\Task4BeverageLabels\bin\Debug\Task4BeverageLabels.exe
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Exercises\CSharpBasicSyntax\Task4BeverageLabels\bin\Debug\Task4BeverageLabels.pdb
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Exercises\CSharpBasicSyntax\Task4BeverageLabels\obj\Debug\Task4BeverageLabels.csproj.CoreCompileInputs.cache
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Exercises\CSharpBasicSyntax\Task4BeverageLabels\obj\Debug\Task4BeverageLabels.exe
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Exercises\CSharpBasicSyntax\Task4BeverageLabels\obj\Debug\Task4BeverageLabels.pdb

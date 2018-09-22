@@ -1,0 +1,7 @@
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Exercises\CSharpBasicSyntax\TAsk3MIlesToKilometers\bin\Debug\TAsk3MIlesToKilometers.exe.config
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Exercises\CSharpBasicSyntax\TAsk3MIlesToKilometers\bin\Debug\TAsk3MIlesToKilometers.exe
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Exercises\CSharpBasicSyntax\TAsk3MIlesToKilometers\bin\Debug\TAsk3MIlesToKilometers.pdb
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Exercises\CSharpBasicSyntax\TAsk3MIlesToKilometers\obj\Debug\TAsk3MIlesToKilometers.csprojResolveAssemblyReference.cache
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Exercises\CSharpBasicSyntax\TAsk3MIlesToKilometers\obj\Debug\TAsk3MIlesToKilometers.csproj.CoreCompileInputs.cache
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Exercises\CSharpBasicSyntax\TAsk3MIlesToKilometers\obj\Debug\TAsk3MIlesToKilometers.exe
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Exercises\CSharpBasicSyntax\TAsk3MIlesToKilometers\obj\Debug\TAsk3MIlesToKilometers.pdb
