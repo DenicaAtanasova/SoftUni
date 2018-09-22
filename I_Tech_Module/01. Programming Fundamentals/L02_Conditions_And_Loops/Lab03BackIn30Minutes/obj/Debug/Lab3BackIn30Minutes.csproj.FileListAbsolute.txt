@@ -1,0 +1,6 @@
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\Lab3BackIn30Minutes\bin\Debug\Lab3BackIn30Minutes.exe.config
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\Lab3BackIn30Minutes\bin\Debug\Lab3BackIn30Minutes.exe
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\Lab3BackIn30Minutes\bin\Debug\Lab3BackIn30Minutes.pdb
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\Lab3BackIn30Minutes\obj\Debug\Lab3BackIn30Minutes.csproj.CoreCompileInputs.cache
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\Lab3BackIn30Minutes\obj\Debug\Lab3BackIn30Minutes.exe
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\Lab3BackIn30Minutes\obj\Debug\Lab3BackIn30Minutes.pdb

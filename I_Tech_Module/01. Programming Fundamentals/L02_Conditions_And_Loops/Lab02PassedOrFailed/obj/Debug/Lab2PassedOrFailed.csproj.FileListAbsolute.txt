@@ -1,0 +1,6 @@
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\Lab2PassedOrFailed\bin\Debug\Lab2PassedOrFailed.exe.config
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\Lab2PassedOrFailed\bin\Debug\Lab2PassedOrFailed.exe
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\Lab2PassedOrFailed\bin\Debug\Lab2PassedOrFailed.pdb
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\Lab2PassedOrFailed\obj\Debug\Lab2PassedOrFailed.csproj.CoreCompileInputs.cache
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\Lab2PassedOrFailed\obj\Debug\Lab2PassedOrFailed.exe
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson2ConditionsAndLoops\Lesson2ConditionsAndLoops\Lab2PassedOrFailed\obj\Debug\Lab2PassedOrFailed.pdb
