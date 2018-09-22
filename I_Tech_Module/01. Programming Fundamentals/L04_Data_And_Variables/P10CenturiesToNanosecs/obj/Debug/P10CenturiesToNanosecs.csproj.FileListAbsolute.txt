@@ -1,0 +1,6 @@
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\P10CenturiesToNanosecs\bin\Debug\P10CenturiesToNanosecs.exe.config
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\P10CenturiesToNanosecs\bin\Debug\P10CenturiesToNanosecs.exe
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\P10CenturiesToNanosecs\bin\Debug\P10CenturiesToNanosecs.pdb
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\P10CenturiesToNanosecs\obj\Debug\P10CenturiesToNanosecs.csproj.CoreCompileInputs.cache
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\P10CenturiesToNanosecs\obj\Debug\P10CenturiesToNanosecs.exe
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\P10CenturiesToNanosecs\obj\Debug\P10CenturiesToNanosecs.pdb

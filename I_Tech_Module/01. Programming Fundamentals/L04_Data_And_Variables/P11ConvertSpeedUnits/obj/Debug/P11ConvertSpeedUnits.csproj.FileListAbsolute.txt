@@ -1,0 +1,7 @@
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\P11ConvertSpeedUnits\bin\Debug\P11ConvertSpeedUnits.exe.config
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\P11ConvertSpeedUnits\bin\Debug\P11ConvertSpeedUnits.exe
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\P11ConvertSpeedUnits\bin\Debug\P11ConvertSpeedUnits.pdb
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\P11ConvertSpeedUnits\obj\Debug\P11ConvertSpeedUnits.csprojResolveAssemblyReference.cache
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\P11ConvertSpeedUnits\obj\Debug\P11ConvertSpeedUnits.csproj.CoreCompileInputs.cache
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\P11ConvertSpeedUnits\obj\Debug\P11ConvertSpeedUnits.exe
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Lesson4DataAndVariables\Lesson4DataAndVariables\P11ConvertSpeedUnits\obj\Debug\P11ConvertSpeedUnits.pdb
