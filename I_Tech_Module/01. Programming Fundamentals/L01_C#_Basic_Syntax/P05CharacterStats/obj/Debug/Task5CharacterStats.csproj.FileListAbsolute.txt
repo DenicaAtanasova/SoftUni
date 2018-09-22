@@ -1,0 +1,6 @@
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Exercises\CSharpBasicSyntax\Task5CharacterStats\bin\Debug\Task5CharacterStats.exe.config
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Exercises\CSharpBasicSyntax\Task5CharacterStats\bin\Debug\Task5CharacterStats.exe
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Exercises\CSharpBasicSyntax\Task5CharacterStats\bin\Debug\Task5CharacterStats.pdb
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Exercises\CSharpBasicSyntax\Task5CharacterStats\obj\Debug\Task5CharacterStats.csproj.CoreCompileInputs.cache
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Exercises\CSharpBasicSyntax\Task5CharacterStats\obj\Debug\Task5CharacterStats.exe
+H:\SoftUni\02. Tech Module\01. Programming Fundamentals\Exercises\CSharpBasicSyntax\Task5CharacterStats\obj\Debug\Task5CharacterStats.pdb
