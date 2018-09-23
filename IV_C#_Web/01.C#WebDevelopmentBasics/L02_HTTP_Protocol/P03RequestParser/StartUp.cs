@@ -49,7 +49,7 @@ namespace P03RequestParser
             else
             {
                 string statusCode = "404";
-                string status = "Not Found";
+                string status = "NotFound";
 
                 Console.WriteLine(response, requestProtocol, statusCode, status, status.Length, status);
             }
