@@ -39,7 +39,7 @@ namespace P02ValidateURL
                     result.Append(Environment.NewLine + "Query: " + query);
                 }
 
-                if (query != "")
+                if (fragment != "")
                 {
                     result.Append(Environment.NewLine + "Fragment: " + fragment);
                 }
