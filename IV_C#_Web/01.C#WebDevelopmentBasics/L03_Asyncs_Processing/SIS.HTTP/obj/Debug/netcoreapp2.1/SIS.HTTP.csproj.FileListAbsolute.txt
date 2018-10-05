@@ -1,0 +1,9 @@
+H:\SoftUni\IV_C#_Web\01.C#WebDevelopmentBasics\L03_Asyncs_Processing\SIS.HTTP\bin\Debug\netcoreapp2.1\SIS.HTTP.deps.json
+H:\SoftUni\IV_C#_Web\01.C#WebDevelopmentBasics\L03_Asyncs_Processing\SIS.HTTP\bin\Debug\netcoreapp2.1\SIS.HTTP.dll
+H:\SoftUni\IV_C#_Web\01.C#WebDevelopmentBasics\L03_Asyncs_Processing\SIS.HTTP\bin\Debug\netcoreapp2.1\SIS.HTTP.pdb
+H:\SoftUni\IV_C#_Web\01.C#WebDevelopmentBasics\L03_Asyncs_Processing\SIS.HTTP\obj\Debug\netcoreapp2.1\SIS.HTTP.csprojAssemblyReference.cache
+H:\SoftUni\IV_C#_Web\01.C#WebDevelopmentBasics\L03_Asyncs_Processing\SIS.HTTP\obj\Debug\netcoreapp2.1\SIS.HTTP.csproj.CoreCompileInputs.cache
+H:\SoftUni\IV_C#_Web\01.C#WebDevelopmentBasics\L03_Asyncs_Processing\SIS.HTTP\obj\Debug\netcoreapp2.1\SIS.HTTP.AssemblyInfoInputs.cache
+H:\SoftUni\IV_C#_Web\01.C#WebDevelopmentBasics\L03_Asyncs_Processing\SIS.HTTP\obj\Debug\netcoreapp2.1\SIS.HTTP.AssemblyInfo.cs
+H:\SoftUni\IV_C#_Web\01.C#WebDevelopmentBasics\L03_Asyncs_Processing\SIS.HTTP\obj\Debug\netcoreapp2.1\SIS.HTTP.dll
+H:\SoftUni\IV_C#_Web\01.C#WebDevelopmentBasics\L03_Asyncs_Processing\SIS.HTTP\obj\Debug\netcoreapp2.1\SIS.HTTP.pdb
