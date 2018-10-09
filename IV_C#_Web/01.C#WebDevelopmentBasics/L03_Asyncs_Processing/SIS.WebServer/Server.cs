@@ -46,7 +46,6 @@ namespace SIS.WebServer
         {
             while (this.isRunning)
             {
-                Thread.Sleep(3000);
                 var client = await this.listener.AcceptSocketAsync();
                 var connectionHandler = new ConnectionHandler(client, this.serverRoutingTable);
                 await connectionHandler.ProcessRequestAsync();
