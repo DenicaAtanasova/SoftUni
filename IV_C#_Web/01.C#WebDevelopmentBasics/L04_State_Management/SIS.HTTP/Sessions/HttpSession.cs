@@ -1,7 +1,8 @@
 ﻿
 namespace SIS.HTTP.Sessions
 {
-    using SIS.HTTP.Sessions.Contracts;
+    using Common;
+    using Sessions.Contracts;
     using System.Collections.Generic;
 
     public class HttpSession : IHttpSession
@@ -10,6 +11,8 @@ namespace SIS.HTTP.Sessions
 
         public HttpSession(string id)
         {
+            CoreValidator.ThrowIfNullOrEmpty(id, nameof(id));
+
             this.Id = id;
             this.parameters = new Dictionary<string, object>();
         }
@@ -18,10 +21,8 @@ namespace SIS.HTTP.Sessions
 
         public void AddParameter(string name, object parameter)
         {
-            if (!this.ContainsParameter(name))
-            {
-                this.parameters[name] = null;
-            }
+            CoreValidator.ThrowIfNullOrEmpty(name, nameof(name));
+            CoreValidator.ThrowIfNull(parameter, nameof(parameter));
 
             this.parameters[name] = parameter;
         }
@@ -33,17 +34,14 @@ namespace SIS.HTTP.Sessions
 
         public bool ContainsParameter(string name)
         {
+            CoreValidator.ThrowIfNullOrEmpty(name, nameof(name));
             return this.parameters.ContainsKey(name);
         }
 
         public object GetParameter(string name)
         {
-            if (!this.ContainsParameter(name))
-            {
-                return null;
-            }
-
-            return this.parameters[name];
+            CoreValidator.ThrowIfNullOrEmpty(name, nameof(name));
+            return this.parameters.GetValueOrDefault(name, null);
         }
     }
 }

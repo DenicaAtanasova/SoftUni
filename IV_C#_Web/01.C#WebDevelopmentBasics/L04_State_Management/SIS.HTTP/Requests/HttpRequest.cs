@@ -1,23 +1,25 @@
 ﻿
 namespace SIS.HTTP.Requests
 {
+    using Common;
+    using Cookies;
+    using Cookies.Contracts;
+    using Enums;
+    using Exceptions;
+    using Extensions;
+    using Headers;
+    using Requests.Contracts;
+    using Sessions.Contracts;
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using SIS.HTTP.Common;
-    using SIS.HTTP.Cookies;
-    using SIS.HTTP.Cookies.Contracts;
-    using SIS.HTTP.Enums;
-    using SIS.HTTP.Exceptions;
-    using SIS.HTTP.Extensions;
-    using SIS.HTTP.Headers;
-    using SIS.HTTP.Requests.Contracts;
-    using SIS.HTTP.Sessions.Contracts;
 
     public class HttpRequest : IHttpRequest
     {
         public HttpRequest(string requestString)
         {
+            CoreValidator.ThrowIfNullOrEmpty(requestString, nameof(requestString));
+
             this.FormData = new Dictionary<string, object>();
             this.QueryData = new Dictionary<string, object>();
             this.Headers = new HttpHeaderCollection();
@@ -66,12 +68,9 @@ namespace SIS.HTTP.Requests
 
         private void ParseCookies()
         {
-            if (!this.Headers.ContainsHeader(GlobalConstants.CookieHeaderKey))
-            {
-                return;
-            }
+            if (!this.Headers.ContainsHeader(HttpHeader.Cookie)) return;
 
-            var cookieString = this.Headers.GetHeader(GlobalConstants.CookieHeaderKey).Value;
+            var cookieString = this.Headers.GetHeader(HttpHeader.Cookie).Value;
 
             if (String.IsNullOrEmpty(cookieString))
             {

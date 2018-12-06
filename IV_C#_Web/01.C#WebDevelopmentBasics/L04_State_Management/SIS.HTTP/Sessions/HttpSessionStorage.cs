@@ -1,11 +1,13 @@
 ﻿
-using SIS.HTTP.Sessions.Contracts;
-using System.Collections.Concurrent;
 
 namespace SIS.HTTP.Sessions
 {
+    using Sessions.Contracts;
+    using System.Collections.Concurrent;
+
     public class HttpSessionStorage
     {
+        public const string SessionCookieKey = "SIS_ID";
 
         private static readonly ConcurrentDictionary<string, IHttpSession> sessions
             = new ConcurrentDictionary<string, IHttpSession>();

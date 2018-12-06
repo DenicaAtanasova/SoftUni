@@ -1,15 +1,15 @@
 ﻿
 namespace SIS.WebServer
 {
-    using SIS.HTTP.Common;
-    using SIS.HTTP.Cookies;
-    using SIS.HTTP.Enums;
-    using SIS.HTTP.Requests;
-    using SIS.HTTP.Requests.Contracts;
-    using SIS.HTTP.Responses;
-    using SIS.HTTP.Responses.Contracts;
-    using SIS.HTTP.Sessions;
-    using SIS.WebServer.Routing;
+    using HTTP.Common;
+    using HTTP.Cookies;
+    using HTTP.Enums;
+    using HTTP.Requests;
+    using HTTP.Requests.Contracts;
+    using HTTP.Responses;
+    using HTTP.Responses.Contracts;
+    using HTTP.Sessions;
+    using Routing;
     using System;
     using System.Net.Sockets;
     using System.Text;
@@ -93,9 +93,9 @@ namespace SIS.WebServer
         {
             string sessionId = null;
 
-            if (httpRequest.Cookies.ContainsCookie(GlobalConstants.SessionCookieKey))
+            if (httpRequest.Cookies.ContainsCookie(HttpSessionStorage.SessionCookieKey))
             {
-                var cookie = httpRequest.Cookies.GetCookie(GlobalConstants.SessionCookieKey);
+                var cookie = httpRequest.Cookies.GetCookie(HttpSessionStorage.SessionCookieKey);
                 sessionId = cookie.Value;
                 httpRequest.Session = HttpSessionStorage.GetSession(sessionId);
             }
@@ -113,7 +113,7 @@ namespace SIS.WebServer
             if (sessionId != null)
             {
                 httpResponse
-                    .AddCookie(new HttpCookie(GlobalConstants.SessionCookieKey
+                    .AddCookie(new HttpCookie(HttpSessionStorage.SessionCookieKey
                         , $"{sessionId}; HttpOnly"));
             }
         }

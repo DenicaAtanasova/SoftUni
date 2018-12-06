@@ -1,7 +1,8 @@
 ﻿
 namespace SIS.HTTP.Cookies
 {
-    using SIS.HTTP.Cookies.Contracts;
+    using Contracts;
+    using System.Collections;
     using System.Collections.Generic;
     using System.Linq;
 
@@ -42,6 +43,19 @@ namespace SIS.HTTP.Cookies
         public bool HasCookies()
         {
             return cookies.Any();
+        }
+
+        public IEnumerator<HttpCookie> GetEnumerator()
+        {
+            foreach (var cookie in this.cookies)
+            {
+                yield return cookie.Value;
+            }
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
         }
 
         public override string ToString()

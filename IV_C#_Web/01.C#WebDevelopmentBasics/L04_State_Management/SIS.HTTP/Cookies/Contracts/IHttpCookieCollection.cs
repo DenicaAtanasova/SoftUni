@@ -1,7 +1,9 @@
 ﻿
 namespace SIS.HTTP.Cookies.Contracts
 {
-    public interface IHttpCookieCollection
+    using System.Collections.Generic;
+
+    public interface IHttpCookieCollection : IEnumerable<HttpCookie>
     {
         void Add(HttpCookie cookie);
 

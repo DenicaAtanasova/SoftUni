@@ -1,13 +1,13 @@
 ﻿
 namespace SIS.HTTP.Responses
 {
-    using SIS.HTTP.Common;
-    using SIS.HTTP.Cookies;
-    using SIS.HTTP.Cookies.Contracts;
-    using SIS.HTTP.Enums;
-    using SIS.HTTP.Extensions;
-    using SIS.HTTP.Headers;
-    using SIS.HTTP.Responses.Contracts;
+    using Common;
+    using Cookies;
+    using Cookies.Contracts;
+    using Enums;
+    using Extensions;
+    using Headers;
+    using Responses.Contracts;
     using System;
     using System.Linq;
     using System.Text;
@@ -16,13 +16,15 @@ namespace SIS.HTTP.Responses
     {
         public HttpResponse(HttpResponseStatusCode statusCode)
         {
+            CoreValidator.ThrowIfNull(statusCode, nameof(statusCode));
+
             this.StatusCode = statusCode;
             this.Headers = new HttpHeaderCollection();
             this.Cookies = new HttpCookieCollection();
             this.Content = new byte[0];
         }
 
-        public HttpResponseStatusCode StatusCode { get ; set; }
+        public HttpResponseStatusCode StatusCode { get ; }
 
         public IHttpHeaderCollection Headers { get; }
 
@@ -32,11 +34,13 @@ namespace SIS.HTTP.Responses
 
         public void AddHeader(HttpHeader header)
         {
+            CoreValidator.ThrowIfNull(header, nameof(header));
             this.Headers.Add(header);
         }
 
         public void AddCookie(HttpCookie cookie)
         {
+            CoreValidator.ThrowIfNull(cookie, nameof(cookie));
             this.Cookies.Add(cookie);
         }
 
@@ -47,7 +51,7 @@ namespace SIS.HTTP.Responses
 
         public override string ToString()
         {
-            var result = new StringBuilder();
+            StringBuilder result = new StringBuilder();
 
             result
                 .Append($"{GlobalConstants.HttpOneProtocolFragment} {this.StatusCode.GetResponseLine()}").Append(Environment.NewLine)
@@ -55,7 +59,10 @@ namespace SIS.HTTP.Responses
 
             if (this.Cookies.HasCookies())
             {
-                result.AppendLine($"Set-Cookie: {this.Cookies}").Append(Environment.NewLine);
+                foreach (var httpCookie in this.Cookies)
+                {
+                    result.Append($"Set-Cookie: {httpCookie}").Append(Environment.NewLine);
+                }
             }
 
             result.Append(Environment.NewLine);
