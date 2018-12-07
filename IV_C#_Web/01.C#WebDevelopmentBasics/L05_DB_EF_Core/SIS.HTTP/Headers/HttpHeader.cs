@@ -5,7 +5,21 @@ namespace SIS.HTTP.Headers
 
     public class HttpHeader
     {
+        public const string Authorization = "Authorization";
+
+        public const string ContentDisposition = "Content-Disposition";
+
+        public const string ContentLength = "Content-Length";
+
+        public const string ContentType = "Content-Type";
+
         public const string Cookie = "Cookie";
+
+        public const string Host = "Host";
+
+        public const string Location = "Location";
+
+        public const string Server = "Server";
 
         public HttpHeader(string key, string value)
         {

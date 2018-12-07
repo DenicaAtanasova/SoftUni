@@ -14,6 +14,8 @@ namespace SIS.HTTP.Responses
 
     public class HttpResponse : IHttpResponse
     {
+        public HttpResponse() { }
+
         public HttpResponse(HttpResponseStatusCode statusCode)
         {
             CoreValidator.ThrowIfNull(statusCode, nameof(statusCode));

@@ -1,9 +1,9 @@
 ﻿
 namespace SIS.WebServer.Results
 {
-    using SIS.HTTP.Enums;
-    using SIS.HTTP.Headers;
-    using SIS.HTTP.Responses;
+    using HTTP.Enums;
+    using HTTP.Headers;
+    using HTTP.Responses;
     using System.Text;
 
     public class TextResult : HttpResponse
@@ -11,7 +11,7 @@ namespace SIS.WebServer.Results
         public TextResult(string content, HttpResponseStatusCode responseStatusCode)
             :base(responseStatusCode)
         {
-            this.Headers.Add(new HttpHeader("Content - Type", "text/plain"));
+            this.Headers.Add(new HttpHeader(HttpHeader.ContentType, "text/plain; charset=utf-8"));
             this.Content = Encoding.UTF8.GetBytes(content);
         }
     }

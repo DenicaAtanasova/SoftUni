@@ -11,6 +11,6 @@ namespace SIS.HTTP.Enums
         Unauthorized = 401,
         Forbidden = 403,
         NotFound = 404,
-        InternalServerEror = 500
+        InternalServerError = 500
     }
 }
