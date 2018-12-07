@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace IRunesWebApp.Migrations
 {
     [DbContext(typeof(IRunesDbContext))]
-    [Migration("20181207133811_ModelsFinal")]
-    partial class ModelsFinal
+    [Migration("20181207134902_ModelsCreated")]
+    partial class ModelsCreated
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
