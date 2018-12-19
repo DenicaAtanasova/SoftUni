@@ -7,13 +7,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Labs", "Labs", "{A62E3717-6
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exercises", "Exercises", "{C6025511-AE30-43F3-B186-3D6679A85671}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L01_Reverse_Strings", "L01_Reverse_Strings\L01_Reverse_Strings.csproj", "{39D3EAAF-D7CF-48C2-A29F-56B05679518D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "L01_Reverse_Strings", "L01_Reverse_Strings\L01_Reverse_Strings.csproj", "{39D3EAAF-D7CF-48C2-A29F-56B05679518D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L02_SImple_Calculator", "L02_SImple_Calculator\L02_SImple_Calculator.csproj", "{F2AD1DE5-449A-46CC-92CB-D3A78855184A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "L02_SImple_Calculator", "L02_SImple_Calculator\L02_SImple_Calculator.csproj", "{F2AD1DE5-449A-46CC-92CB-D3A78855184A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L03_Decimal_To_Binary", "L03_Decimal_To_Binary\L03_Decimal_To_Binary.csproj", "{F915B83E-C4A6-4713-9E6A-1FD83BFD0A94}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "L03_Decimal_To_Binary", "L03_Decimal_To_Binary\L03_Decimal_To_Binary.csproj", "{F915B83E-C4A6-4713-9E6A-1FD83BFD0A94}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L04_Matching_Brackets", "L04_Matching_Brackets\L04_Matching_Brackets.csproj", "{A24A3320-2576-4FD7-BF28-799FEDBF209E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "L04_Matching_Brackets", "L04_Matching_Brackets\L04_Matching_Brackets.csproj", "{A24A3320-2576-4FD7-BF28-799FEDBF209E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L05_Hot_Potato", "L05_Hot_Potato\L05_Hot_Potato.csproj", "{00973F73-C07F-4823-A324-4C8645E83D3D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L06_Traffic_Light", "L06_Traffic_Light\L06_Traffic_Light.csproj", "{EB377138-DE3E-490C-8E9D-C59870CD3A36}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,6 +41,14 @@ Global
 		{A24A3320-2576-4FD7-BF28-799FEDBF209E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A24A3320-2576-4FD7-BF28-799FEDBF209E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A24A3320-2576-4FD7-BF28-799FEDBF209E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00973F73-C07F-4823-A324-4C8645E83D3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00973F73-C07F-4823-A324-4C8645E83D3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00973F73-C07F-4823-A324-4C8645E83D3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00973F73-C07F-4823-A324-4C8645E83D3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB377138-DE3E-490C-8E9D-C59870CD3A36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB377138-DE3E-490C-8E9D-C59870CD3A36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB377138-DE3E-490C-8E9D-C59870CD3A36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB377138-DE3E-490C-8E9D-C59870CD3A36}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,6 +58,8 @@ Global
 		{F2AD1DE5-449A-46CC-92CB-D3A78855184A} = {A62E3717-6358-4E18-823E-9B4F2E7A2351}
 		{F915B83E-C4A6-4713-9E6A-1FD83BFD0A94} = {A62E3717-6358-4E18-823E-9B4F2E7A2351}
 		{A24A3320-2576-4FD7-BF28-799FEDBF209E} = {A62E3717-6358-4E18-823E-9B4F2E7A2351}
+		{00973F73-C07F-4823-A324-4C8645E83D3D} = {A62E3717-6358-4E18-823E-9B4F2E7A2351}
+		{EB377138-DE3E-490C-8E9D-C59870CD3A36} = {A62E3717-6358-4E18-823E-9B4F2E7A2351}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {24E12E1C-393C-4926-8AA6-89470E556F76}
