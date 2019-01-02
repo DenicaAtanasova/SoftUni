@@ -41,8 +41,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P08_Radioactive_Bunnies", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P09_Crossfire", "P09_Crossfire\P09_Crossfire.csproj", "{9DDB610E-2DE3-44CC-8FC1-4647104D1C2B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P10_The_Heigan_Dance", "P10_The_Heigan_Dance\P10_The_Heigan_Dance.csproj", "{B7189E26-C187-4584-8C41-0D726A23937C}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -117,10 +115,6 @@ Global
 		{9DDB610E-2DE3-44CC-8FC1-4647104D1C2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9DDB610E-2DE3-44CC-8FC1-4647104D1C2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9DDB610E-2DE3-44CC-8FC1-4647104D1C2B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B7189E26-C187-4584-8C41-0D726A23937C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B7189E26-C187-4584-8C41-0D726A23937C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B7189E26-C187-4584-8C41-0D726A23937C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B7189E26-C187-4584-8C41-0D726A23937C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -143,7 +137,6 @@ Global
 		{9A86897B-D446-49A5-8D1A-FF8996B7F3EA} = {0FBDF06B-F0D4-4A5C-AF5F-3026DD12AE38}
 		{0E6238F2-968C-4EE6-BF5E-353E6228B640} = {0FBDF06B-F0D4-4A5C-AF5F-3026DD12AE38}
 		{9DDB610E-2DE3-44CC-8FC1-4647104D1C2B} = {0FBDF06B-F0D4-4A5C-AF5F-3026DD12AE38}
-		{B7189E26-C187-4584-8C41-0D726A23937C} = {0FBDF06B-F0D4-4A5C-AF5F-3026DD12AE38}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AB41491B-9CD7-426D-8DB4-EAD7388A443B}
