@@ -29,7 +29,7 @@ function validate() {
             fillDateToEGN(regionNum, 6);
         }
 
-        let genderBtn = document.document.querySelector('input:checked');
+        let genderBtn = document.querySelector('input:checked');
         if(genderBtn.value === 'Male'){
             EGN[8] = 2;
         } else {
@@ -39,6 +39,9 @@ function validate() {
         EGN[9] = calculateWeight(EGN);
 
         clearInput();
+
+        let egnOutput = document.getElementById('egn');
+        egnOutput.textContent = `Your EGN is: ${EGN.join('')}`;
     }
 
     function fillDateToEGN(date, index){
@@ -50,8 +53,8 @@ function validate() {
         let weightPosition = [2, 4, 8, 5, 10, 9, 7, 3, 6];   
         let weightSum = 0;
     
-        for(let i = 0; i < 9; i++){
-            weightSum += weightPosition[i] + EGN[i];
+        for(let i = 0; i < weightPosition.length; i++){
+            weightSum += weightPosition[i] * EGN[i];
         }
     
         let checkSum = weightSum % 11;
@@ -63,8 +66,9 @@ function validate() {
         yearElement.value = '';
         monthElement.selectedIndex = 0;
         dateElement.value = '';
-        let genderBtn = document.document.querySelector('input:checked');
+        let genderBtn = document.querySelector('input:checked');
         genderBtn.checked = false;
+        regionElement.value = '';
     }
 }
 
