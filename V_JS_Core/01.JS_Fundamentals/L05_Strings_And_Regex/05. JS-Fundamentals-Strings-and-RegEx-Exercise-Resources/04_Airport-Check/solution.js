@@ -4,18 +4,18 @@ function solve() {
     let info = input[0];
     let command = input[1];
     
-    let flight = getFlightInfo(info);
+    let flightInfo = getFlightInfo(info);
 
-    printMessage(command, flight)
+    printMessage(command, flightInfo)
 
-    function printMessage(command, flight){        
-        let airportInfo = flight.airport.split('/');
-
+    function printMessage(command, flightInfo){        
+        let airportInfo = flightInfo.airport.split('/');
+        
         let messages = {
-        name : `Mr/Ms, ${flight.passengerName}, have a nice flight!`,
-        flight : `Your flight number ${flight.flightNumber} is from ${airportInfo[0]} to ${airportInfo[1]}.`,
-        company : `Have a nice flight with ${flight.company}.`,
-        all : `Mr/Ms, ${flight.passengerName}, your flight number ${flight.flightNumber} is from ${airportInfo[0]} to ${airportInfo[1]}. Have a nice flight with ${flight.company}.`,
+            name : `Mr/Ms, ${flightInfo.passengerName}, have a nice flight!`,
+            flight : `Your flight number ${flightInfo.flightNumber} is from ${airportInfo[0]} to ${airportInfo[1]}.`,
+            company : `Have a nice flight with ${flightInfo.company}.`,
+            all : `Mr/Ms, ${flightInfo.passengerName}, your flight number ${flightInfo.flightNumber} is from ${airportInfo[0]} to ${airportInfo[1]}. Have a nice flight with ${flightInfo.company}.`,
         };
 
         resultElement.textContent = messages[command];   
@@ -29,10 +29,10 @@ function solve() {
         let companyPattern = /- ([A-Z][A-Za-z]*\*[A-Z][A-Za-z]*) /;
 
         let flightInfo = {
-            passengerName : info.match(passengerNamePattern)[1].replace(/\-/g, ' ').trim(),
+            passengerName : info.match(passengerNamePattern)[1].replace(/\-/g, ' '),
             airport : info.match(airportPattern)[1],
-            flightNumber : info.match(flightNumberPattern)[1].trim(),
-            company : info.match(companyPattern)[1].replace(/\-/g, '').replace('*', ' ').trim()
+            flightNumber : info.match(flightNumberPattern)[1],
+            company : info.match(companyPattern)[1].replace('*', ' ')
         };
 
         return flightInfo; 
