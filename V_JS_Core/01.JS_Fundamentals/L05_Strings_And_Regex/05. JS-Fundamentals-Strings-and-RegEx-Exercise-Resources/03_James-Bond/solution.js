@@ -13,10 +13,12 @@ function solve() {
   function decode(specialKey, text){
     let decoder = ['!', '%', '#', '$'];
     let regex = new RegExp(`(\\s|^)(${specialKey}\\s+)([A-Z!#$%]{8,})(\\.|,|\\s|$)`, 'gi');
+    
+    let match;
     while(match = regex.exec(text)){
       
-      if(match[1] === match[1].toUpperCase()){
-        let decodedString = match[1].split('')
+      if(match[3] === match[3].toUpperCase()){
+        let decodedString = match[3].split('')
                             .map(x => {
                               if(decoder.includes(x)){
                                 return decoder.indexOf(x) + 1;
@@ -27,7 +29,7 @@ function solve() {
                             })
                             .join('');
 
-      text = text.replace(match[1], decodedString);
+      text = text.replace(match[3], decodedString);
       }
     }
 
