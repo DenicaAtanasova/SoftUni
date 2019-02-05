@@ -1,48 +1,50 @@
 function solve() {
-  
-  let resultElement = document.getElementById('result');
-  let paragraphElement = document.createElement('p');
+    let inputArray = JSON.parse(document.getElementById('arr').value);
+    let resultElement = document.getElementById('result');
 
-  let input = JSON.parse(document.getElementById('arr').value);
-  
-  let specialKey = input.shift();
-  let text = input.join('\n');
+    let specialKey = inputArray.shift();
+    if (specialKey.match(/[A-Za-z]+/g)) {
+        let keyAndMessagePattern = new RegExp(`(?<=\\s|^)${specialKey}\\s+([A-Z!#$%]{8,})(?=\\s|\\,|\\.|$)`, 'gi');
+        let messagePattern = /[A-Z!#$%]{8,}/g;
 
-  appendDecodedParagraph(decode(specialKey, text));
-  
-  function decode(specialKey, text){
-    let decoder = ['!', '%', '#', '$'];
-    let regex = new RegExp(`(\\s|^)(${specialKey}\\s+)([A-Z!#$%]{8,})(\\.|,|\\s|$)`, 'gi');
-    
-    let match;
-    while(match = regex.exec(text)){
-      
-      if(match[3] === match[3].toUpperCase()){
-        let decodedString = match[3].split('')
-                            .map(x => {
-                              if(decoder.includes(x)){
-                                return decoder.indexOf(x) + 1;
-                              }
-                              else{
-                                return x.toLowerCase();
-                              }
-                            })
-                            .join('');
+        for (let currentText of inputArray) {
+            while ((valid = keyAndMessagePattern.exec(currentText)) !== null) {
+                let findMessage = valid[1];
 
-      text = text.replace(match[3], decodedString);
-      }
+                if (findMessage.match(messagePattern)) {
+                    let newMessage = decodeMessage(findMessage);
+
+                    currentText = currentText.replace(findMessage, newMessage);
+                }
+            }
+
+            appendToParent(currentText);
+        }
     }
 
-    return text;
-  }
+    function decodeMessage(message) {
+        let newMessage = '';
+        for (let currentSymbol of message) {
 
-  function appendDecodedParagraph(decodedString){
-    
-    decodedString.split('\n')
-                 .forEach(line => {
-                    let pElement = paragraphElement.cloneNode();
-                    pElement.textContent = line;
-                    resultElement.appendChild(pElement);
-                 });
-  }
+            if (currentSymbol === '!') {
+                newMessage += 1;
+            } else if (currentSymbol === '%') {
+                newMessage += 2;
+            } else if (currentSymbol === '#') {
+                newMessage += 3
+            } else if (currentSymbol === '$') {
+                newMessage += 4;
+            } else if (currentSymbol.toUpperCase() === currentSymbol) {
+                newMessage += currentSymbol.toLowerCase();
+            }
+        }
+
+        return newMessage;
+    }
+
+    function appendToParent(result) {
+        let pElement = document.createElement('p');
+        pElement.textContent = result;
+        resultElement.appendChild(pElement);
+    }
 }
