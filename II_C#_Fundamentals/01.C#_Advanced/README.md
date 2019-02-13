@@ -1,4 +1,4 @@
-![alt text](https://https://github.com/librariesio/pictogram/blob/master/vendor/assets/images/c-sharp/c-sharp.png "Logo Title Text 2")
+![alt text](https://https://github.com/librariesio/pictogram/blob/master/vendor/assets/images/c-sharp/c-sharp.png "Logo Title Text 1")
 
 
 # Course: C# Advanced
