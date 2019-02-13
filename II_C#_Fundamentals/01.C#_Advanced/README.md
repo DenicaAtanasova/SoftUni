@@ -1,5 +1,3 @@
-![alt text](https://developer.fedoraproject.org/tech/languages/csharp/about.html "Logo Title Text 2")
-
 
 # Course: C# Advanced
 
