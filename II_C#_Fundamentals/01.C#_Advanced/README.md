@@ -2,5 +2,6 @@
 
 ## CONTENT:
  * Queues_ans_Stacks
-[I'm an inline-style link](https://www.google.com)
+[* Queues_ans_Stacks](https://www.google.com)
+* [Queues_ans_Stacks] (https://www.google.com)
 
