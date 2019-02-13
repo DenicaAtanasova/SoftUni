@@ -9,12 +9,12 @@
 * [Functional Programming](./01.C%23_Advanced/L05_Functional_Programming)
   
 ### 2. [ **OOP Basic**](./02.C%23_OOP_Basic)
-* [Defining Classes](./01.C%23_OOP_Basic/L01_Defining_Classes)
-* [Abstraction](./01.C%23_OOP_Basic/L02_Abstraction)
-* [Encapsulation](./01.C%23_OOP_Basic/L03_Encapsulation)
-* [Inheritance](./01.C%23_OOP_Basic/L04_Inheritance)
-* [Interfaces](./01.C%23_OOP_Basic/L05_Interfaces)
-* [Polymorphism](./01.C%23_OOP_Basic/L06_Polymorphism)
+* [Defining Classes](./02.C%23_OOP_Basic/L01_Defining_Classes)
+* [Abstraction](./02.C%23_OOP_Basic/L02_Abstraction)
+* [Encapsulation](./02.C%23_OOP_Basic/L03_Encapsulation)
+* [Inheritance](./02.C%23_OOP_Basic/L04_Inheritance)
+* [Interfaces](./02.C%23_OOP_Basic/L05_Interfaces)
+* [Polymorphism](./02.C%23_OOP_Basic/L06_Polymorphism)
   
 ### 3. [ **OOP Advanced**](./03.C%23_OOP_Advanced)
 * [Solid](./03.C%23_OOP_Advanced/L01_Solid)
