@@ -1,4 +1,5 @@
-![alt text](https://www.google.com/search?q=javascript+logo&source=lnms&tbm=isch&sa=X&ved=0ahUKEwj5qeeghbngAhUhwqYKHSnSBXYQ_AUIDigB&biw=1920&bih=899#imgrc=mP6iquo8d4Om6M:)
+Inline-style: 
+![alt text](https://banner2.kisspng.com/20180429/www/kisspng-javascript-logo-html-comment-blog-5ae63c22d40699.0773573515250381148685.jpg "Logo Title Text 1")
 # Course: JavaScript Fundamentals
 
 ### CONTENT:
