@@ -2,7 +2,7 @@
 # Course Content:
 
 ### 1. [ **Fundamentals**](./01.JS_Fundamentals)
-  * [Syntax and Operators](./L01_JS_Syntax_And_Operators)
+  * [Syntax and Operators](./01.JS_Fundamentals/L01_JS_Syntax_And_Operators)
   * [DOM](./L02_DOM)
   * [Functions and logic flow](./L03_Functions_And_Logic_Flow)
   * [Arrays and Matrices](./L04_Arrays_And_Matrices)
