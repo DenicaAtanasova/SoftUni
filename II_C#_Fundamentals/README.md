@@ -16,5 +16,9 @@
 * [Interfaces](./01.C%23_OOP_Basic/L05_Interfaces)
 * [Polymorphism](./01.C%23_OOP_Basic/L06_Polymorphism)
   
-### 2. [ **OOP Advanced**](./02.C%23_OOP_Advanced)
-* [Defining Classes](./01.C%23_OOP_Basic/L01_Defining_Classes)
+### 3. [ **OOP Advanced**](./03.C%23_OOP_Advanced)
+* [Solid](./03.C%23_OOP_Advanced/L01_Solid)
+* [Generics](./03.C%23_OOP_Advanced/L02_Generics)
+* [Iterations and Comparators](./03.C%23_OOP_Advanced/L03_Iterations_And_Comparators)
+* [Reflection and Attributes](./03.C%23_OOP_Advanced/L04_Reflection_And_Attributes)
+* [Unit Testing](./03.C%23_OOP_Advanced/L05_Unit_Testing)
