@@ -1,4 +1,4 @@
-![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/C_Sharp_wordmark.svg/464px-C_Sharp_wordmark.svg.png "Logo Title Text 2")
+![alt text](https://developer.fedoraproject.org/tech/languages/csharp/about.html "Logo Title Text 2")
 
 
 # Course: C# Advanced
