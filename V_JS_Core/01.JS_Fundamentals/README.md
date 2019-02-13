@@ -1,4 +1,4 @@
-
+![alt text](https://www.google.com/search?q=javascript+logo&source=lnms&tbm=isch&sa=X&ved=0ahUKEwj5qeeghbngAhUhwqYKHSnSBXYQ_AUIDigB&biw=1920&bih=899#imgrc=mP6iquo8d4Om6M:)
 # Course: JavaScript Fundamentals
 
 ### CONTENT:
