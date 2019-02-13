@@ -11,4 +11,3 @@
   
   ### 2. [ **Advanced**](./02.JS_Advanced)
   * [Advanced functions](./02.JS_Advanced/L01_Advanced_Functions)
-
