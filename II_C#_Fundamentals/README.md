@@ -2,10 +2,19 @@
 # Course Content:
 
 ### 1. [ **Advanced**](./01.C%23_Advanced)
-* [Queues and Stacks](./01.C#_Advanced/L01_Queues_ans_Stacks)
-* [Multidimensional Arrays](./01.C#_Advanced/L02_Multidimensional_Arrays)
-* [Sets and Dictionaries](./01.C#_Advanced/L03_Sets_And_Dictionaries)
-* [Streams](./01.C#_Advanced/L04_Streams)
-* [Functional Programming](./01.C#_Advanced/L05_Functional_Programming)
+* [Queues and Stacks](./01.C%23_Advanced/L01_Queues_ans_Stacks)
+* [Multidimensional Arrays](./01.C%23_Advanced/L02_Multidimensional_Arrays)
+* [Sets and Dictionaries](./01.C%23_Advanced/L03_Sets_And_Dictionaries)
+* [Streams](./01.C%23_Advanced/L04_Streams)
+* [Functional Programming](./01.C%23_Advanced/L05_Functional_Programming)
   
-### 2. [ **OOP Basic**](./02.C#_OOP_Basic)
+### 2. [ **OOP Basic**](./02.C%23_OOP_Basic)
+* [Defining Classes](./01.C%23_OOP_Basic/L01_Defining_Classes)
+* [Abstraction](./01.C%23_OOP_Basic/L02_Abstraction)
+* [Encapsulation](./01.C%23_OOP_Basic/L03_Encapsulation)
+* [Inheritance](./01.C%23_OOP_Basic/L04_Inheritance)
+* [Interfaces](./01.C%23_OOP_Basic/L05_Interfaces)
+* [Polymorphism](./01.C%23_OOP_Basic/L06_Polymorphism)
+  
+### 2. [ **OOP Advanced**](./02.C%23_OOP_Advanced)
+* [Defining Classes](./01.C%23_OOP_Basic/L01_Defining_Classes)
