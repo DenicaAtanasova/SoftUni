@@ -1,1 +1,2 @@
-#Course C# Advanced
+# SoftUni
+C# Advanced
