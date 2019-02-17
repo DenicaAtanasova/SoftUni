@@ -2,3 +2,4 @@
 # Course Content:
 
 * [Advanced Functions](./L01_Advanced_Functions)
+* [Unit Testing](./L02_Unit_Testing)
