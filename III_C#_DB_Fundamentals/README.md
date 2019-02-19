@@ -1,4 +1,5 @@
 ![alt text](https://itraining.bg/wp-content/uploads/2014/09/SQL-Server.jpg "Logo Title Text 1")
+![alt text](https://cdn-images-1.medium.com/max/1600/1*SnZqHENpIMiEKsg999Q0DQ.png "Logo Title Text 1")
 # Course Content:
 
 ### 1. [ **MS SQL Server**](./01.MS_SQL_Server)
