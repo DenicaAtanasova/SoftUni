@@ -2,6 +2,12 @@
 # Course Content:
 
 ### 1. [ **MS SQL Server**](./01.MS_SQL_Server)
-* [Syntax and Operators](./01.JS_Fundamentals/L01_JS_Syntax_And_Operators)
+* [Data Definition](./01.MS_SQL_Server/L01_Data_Definition)
+* [Basic CRUD](./01.MS_SQL_Server/L02_Basic_CRUD)
+* [Build-in Functions](./01.MS_SQL_Server/L03_Built_In_Functions)
+* [Data Aggregation](./01.MS_SQL_Server/L04_Data_Aggregation)
+* [Table Relations](./01.MS_SQL_Server/L05_Table_Relations)
+* [Subqueries and Joins](./01.MS_SQL_Server/L06_Subqueries_And_Joins)
+* [Programmability and Transactions](./01.MS_SQL_Server/L07_Programmability_And_Transactions)
 
 ### 2. [ **Entity Framework**](./02.Entity_Framework)
