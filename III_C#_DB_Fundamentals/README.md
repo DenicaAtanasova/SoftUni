@@ -2,5 +2,6 @@
 # Course Content:
 
 ### 1. [ **MS SQL Server**](./01.MS_SQL_Server)
+* [Syntax and Operators](./01.JS_Fundamentals/L01_JS_Syntax_And_Operators)
 
 ### 2. [ **Entity Framework**](./02.Entity_Framework)
