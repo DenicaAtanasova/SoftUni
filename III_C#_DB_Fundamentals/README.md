@@ -12,3 +12,6 @@
 
 ![alt text](https://cdn-images-1.medium.com/max/1600/1*SnZqHENpIMiEKsg999Q0DQ.png "Logo Title Text 1")
 ### 2. [ **Entity Framework**](./02.Entity_Framework)
+* [Apps Introduction](./02.Entity_Framework/L01_DB_Apps_Introduction)
+* [ORM Fundamentals](./02.Entity_Framework/L02_ORM_Fundamentals)
+* [Entity Framework](./02.Entity_Framework/L03_Entity_Framework)
