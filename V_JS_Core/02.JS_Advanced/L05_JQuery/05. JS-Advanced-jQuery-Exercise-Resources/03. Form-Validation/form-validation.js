@@ -2,24 +2,11 @@ function validate() {
 	$('#submit').on('click', function(e){
         e.preventDefault();
 
-        let usernamePattern = /^[a-z0-9]{3,20}$/gi;
-        let usernameSelector = '#username';
-        let isValidUsername = validateField(usernamePattern, usernameSelector);
-
-        let passwordPattern = /^[\w]{5,15}$/gi;
-        let passwordSelector = '#password';
-        let isValidPassword = validateField(passwordPattern, passwordSelector);
-
-        let confirmPasswordPattern = /^[\w]{5,15}$/gi;
-        let confirmPasswordSelector = '#confirm-password';
-        let isValidConfirmPassword = validateField(confirmPasswordPattern, confirmPasswordSelector);
-
-        let emailPattern = /^[\w]+@[\w\.]+$/gi;
-        let emailSelector = '#email';
-        let isValidEmail = validateField(emailPattern, emailSelector);
-       
-        let companyNumberSelector = '#companyNumber';
-        let isCompanyNumberValid = validateField(/.+/gi, companyNumberSelector);
+        let isValidUsername = validateField(/^[a-z0-9]{3,20}$/gi, '#username');
+        let isValidPassword = validateField(/^[\w]{5,15}$/gi, '#password');
+        let isValidConfirmPassword = validateField(/^[\w]{5,15}$/gi, '#confirm-password');
+        let isValidEmail = validateField(/^[\w]+@[\w\.]+$/gi, '#email');      
+        let isCompanyNumberValid = validateField(/.+/gi, '#companyNumber');
 
         if (isValidUsername && isValidPassword && isValidConfirmPassword && isValidEmail && isCompanyNumberValid) {
             $('#valid').show();
