@@ -13,3 +13,6 @@
   * [Advanced functions](./02.JS_Advanced/L01_Advanced_Functions)
   * [Unit Testing](./02.JS_Advanced/L02_Unit_Testing)  
   * [Classes](./02.JS_Advanced/L03_Classes)
+  * [Object Comsposition](./02.JS_Advanced/L04_Object_Comsposition)
+  * [JQuery](./02.JS_Advanced/L05_JQuery)
+  * [DOM Manipulations](./02.JS_Advanced/L06_DOM_Manipulations)
