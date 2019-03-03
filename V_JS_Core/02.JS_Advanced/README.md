@@ -4,3 +4,6 @@
 * [Advanced Functions](./L01_Advanced_Functions)
 * [Unit Testing](./L02_Unit_Testing)
 * [Classes](./L03_Classes)
+* [Object Comsposition](./L04_Object_Comsposition)
+* [JQuery](./L05_JQuery)
+* [DOM Manipulations](./L06_DOM_Manipulations)
