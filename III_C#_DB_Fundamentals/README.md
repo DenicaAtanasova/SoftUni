@@ -15,5 +15,5 @@
 * [Apps Introduction](./02.Entity_Framework/L01_DB_Apps_Introduction)
 * [ORM Fundamentals](./02.Entity_Framework/L02_ORM_Fundamentals)
 * [Entity Framework](./02.Entity_Framework/L03_Entity_Framework)
-* [L04 Code-First](./02.Entity_Framework/L04_Code-First)
-* [L05 Entity Relations](./02.Entity_Framework/L05_Entity_Relations)
+* [Code-First](./02.Entity_Framework/L04_Code-First)
+* [Entity Relations](./02.Entity_Framework/L05_Entity_Relations)
