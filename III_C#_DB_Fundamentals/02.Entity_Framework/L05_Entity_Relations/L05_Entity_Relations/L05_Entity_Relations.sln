@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.438
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P01_StudentSystem", "P01_StudentSystem\P01_StudentSystem.csproj", "{5AFB3BE7-52FB-484D-B270-2FC1FDC7276D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P03_FootballBetting", "P03_FootballBetting\P03_FootballBetting.csproj", "{78D7D7CF-BF58-4399-92CD-195DF1B79901}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5AFB3BE7-52FB-484D-B270-2FC1FDC7276D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AFB3BE7-52FB-484D-B270-2FC1FDC7276D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AFB3BE7-52FB-484D-B270-2FC1FDC7276D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AFB3BE7-52FB-484D-B270-2FC1FDC7276D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78D7D7CF-BF58-4399-92CD-195DF1B79901}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78D7D7CF-BF58-4399-92CD-195DF1B79901}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78D7D7CF-BF58-4399-92CD-195DF1B79901}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78D7D7CF-BF58-4399-92CD-195DF1B79901}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B929DC77-B710-47BE-B6FB-963D10042E2A}
+	EndGlobalSection
+EndGlobal
