@@ -7,3 +7,4 @@
 * [Object Comsposition](./L04_Object_Comsposition)
 * [JQuery](./L05_JQuery)
 * [DOM Manipulations](./L06_DOM_Manipulations)
+* [Exams](./Exams)
