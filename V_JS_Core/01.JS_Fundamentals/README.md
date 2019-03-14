@@ -6,4 +6,4 @@
 * [Functions and logic flow](./L03_Functions_And_Logic_Flow)
 * [Arrays and Matrices](./L04_Arrays_And_Matrices)
 * [Strings and Regex](./L05_Strings_And_Regex)
-* [FObjects JSON DOM Events](./L06_Objects_JSON_DOM_Events)
+* [Objects JSON DOM Events](./L06_Objects_JSON_DOM_Events)
