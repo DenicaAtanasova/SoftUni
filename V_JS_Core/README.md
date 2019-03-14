@@ -7,7 +7,7 @@
   * [Functions and logic flow](./01.JS_Fundamentals/L03_Functions_And_Logic_Flow)
   * [Arrays and Matrices](./01.JS_Fundamentals/L04_Arrays_And_Matrices)
   * [Strings and Regex](./01.JS_Fundamentals/L05_Strings_And_Regex)
-  * [FObjects JSON DOM Events](./01.JS_Fundamentals/L06_Objects_JSON_DOM_Events)
+  * [Objects JSON DOM Events](./01.JS_Fundamentals/L06_Objects_JSON_DOM_Events)
   
   ### 2. [ **Advanced**](./02.JS_Advanced)
   * [Advanced functions](./02.JS_Advanced/L01_Advanced_Functions)
@@ -16,3 +16,4 @@
   * [Object Comsposition](./02.JS_Advanced/L04_Object_Comsposition)
   * [JQuery](./02.JS_Advanced/L05_JQuery)
   * [DOM Manipulations](./02.JS_Advanced/L06_DOM_Manipulations)
+  * [Exams](./02.JS_Advanced/Exams)
