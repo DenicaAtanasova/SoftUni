@@ -17,3 +17,6 @@
   * [JQuery](./02.JS_Advanced/L05_JQuery)
   * [DOM Manipulations](./02.JS_Advanced/L06_DOM_Manipulations)
   * [Exams](./02.JS_Advanced/Exams)
+  
+  ### 3. [ **Applications**](./03.JS_Applications)
+  * [REST Servicess](./03.JS_Applications/L01_REST_Services)
