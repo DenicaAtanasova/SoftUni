@@ -20,3 +20,5 @@
   
   ### 3. [ **Applications**](./03.JS_Applications)
   * [REST Servicess](./03.JS_Applications/L01_REST_Services)
+  * [AJAX And jQuery AJAX](./03.JS_Applications/L02_AJAX_And_jQuery_AJAX)
+  * [Asynchronous Programming](./03.JS_Applications/L03_Asynchronous_Programming)
