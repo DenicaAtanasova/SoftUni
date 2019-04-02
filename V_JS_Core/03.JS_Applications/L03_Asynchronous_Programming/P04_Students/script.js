@@ -12,7 +12,7 @@ function solve(){
     let baseUrl = 'https://baas.kinvey.com/';
 
     let url = baseUrl + 'appdata/' + appKey + endPoint;
-loadStudents();
+    
     async function loadStudents(){       
 
         let students = await $.ajax({
