@@ -1,0 +1,8 @@
+{
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "handlebars": "^4.1.1"
+  }
+}
