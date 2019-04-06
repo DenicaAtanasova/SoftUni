@@ -4,3 +4,7 @@
   * [REST Servicess](./L01_REST_Services)
   * [AJAX And jQuery AJAX](./L02_AJAX_And_jQuery_AJAX)
   * [Asynchronous Programming](./L03_Asynchronous_Programming)
+  * [Asynchronous Programming](.L03_Asynchronous_Programming)
+  * [JS For Front End](./L04_JS_For_Front_End)
+  * [Templating](./L05_Templating)
+  * [Routing And Archiecture](./L06_Routing_And_Archiecture)
