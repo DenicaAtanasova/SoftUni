@@ -1,38 +1,72 @@
-[
-  {
-    "name": "Drugs"
-  },
-  {
-    "name": "Adult"
-  },
-  {
-    "name": "Electronics"
-  },
-  {
-    "name": "Garden"
-  },
-  {
-    "name": "Weapons"
-  },
-  {
-    "name": "For Children"
-  },
-  {
-    "name": "Sports"
-  },
-  {
-    "name": "Fashion"
-  },
-  {
-    "name": "Autoparts"
-  },
-  {
-    "name": "Business"
-  },
-  {
-    "name": "Other"
-  },
-  {
-    "name": null
-  }
+let response = [{_id: 1, angler: "Pesho", weight: 1000, species:"Legend", location:"Soft Uni", bait:"trolling", captureTime:1}];
+response = JSON.stringify(response);
+server.autoRespond = true;
+let correctHeader = false;
+server.respondWith(/https:\/\/baas.kinvey.com\/appdata\/([\w-]+)\/biggestCatches/, function (xhr, appKey) {
+    if(xhr.requestHeaders.Authorization && xhr.requestHeaders.Authorization === "Basic Secret"){
+        correctHeader = true;
+    }
+    xhr.respond(200, {"Content-Type": "application/json"}, response)
+});
+global.btoa = function(text){
+    return "Secret";
+};
+document.body.innerHTML = `<h1>Biggest Catches</h1>
+<fieldset id="main">
+    <legend>Catches</legend>
+    <div id="catches">
+    </div>
+</fieldset>
+<div id="aside">
+    <button class="load">Load</button>
+    <fieldset id="addForm">
+        <legend>Add Catch</legend>
+        <label>Angler</label>
+        <input type="text" class="angler"/>
+        <label>Weight</label>
+        <input type="number" class="weight"/>
+        <label>Species</label>
+        <input type="text" class="species"/>
+        <label>Location</label>
+        <input type="text" class="location"/>
+        <label>Bait</label>
+        <input type="text" class="bait"/>
+        <label>Capture Time</label>
+        <input type="number" class="captureTime"/>
+        <button class="add">Add</button>
+    </fieldset>
+</div>`;
+
+result();
+$('.load').trigger('click');
+
+setTimeout(checkResults, 70);
+
+function checkResults() {
+    let entries = $('#catches').find(".catch");
+    expect(entries).to.have.lengthOf(1, "Incorrect number of entries");
+    let angler = entries.eq(0).find(".angler");
+    let weight = entries.eq(0).find(".weight");
+    let species = entries.eq(0).find(".species");
+    let location = entries.eq(0).find(".location");
+    let bait = entries.eq(0).find(".bait");
+    let captureTime = entries.eq(0).find(".captureTime");
+
+    expect(angler).to.have.lengthOf(1,"No angler was added");
+    expect(weight).to.have.lengthOf(1,"No weight was added");
+    expect(species).to.have.lengthOf(1,"No species was added");
+    expect(location).to.have.lengthOf(1,"No location was added");
+    expect(bait).to.have.lengthOf(1,"No bait was added");
+    expect(captureTime).to.have.lengthOf(1,"No captureTime was added");
+
+    expect(angler.val()).to.equal("Pesho","Incorrect angler value");
+    expect(weight.val()).to.equal("1000","Incorrect weight value");
+    expect(species.val()).to.equal("Legend","Incorrect species value");
+    expect(location.val()).to.equal("Soft Uni","Incorrect location value");
+    expect(bait.val()).to.equal("trolling","Incorrect bait value");
+    expect(captureTime.val()).to.equal("1","Incorrect capture time value");
+
+    expect(correctHeader).to.equal(true,"Incorrect authorization header");
+    done();
+}
 ]
