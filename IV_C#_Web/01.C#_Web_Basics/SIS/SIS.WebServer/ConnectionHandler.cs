@@ -26,7 +26,6 @@
             this.serverRoutingTable = serverRoutingTable;
         }
 
-
         private IHttpRequest ReadRequest()
         {
             var result = new StringBuilder();
@@ -75,6 +74,7 @@
 
         public void ProcessRequest()
         {
+            IHttpResponse httpResponse = null;
             try
             {
                 var httpRequest = this.ReadRequest();
@@ -83,20 +83,19 @@
                 {
                     Console.WriteLine($"Processing: {httpRequest.RequestMethod} {httpRequest.Path}...");
 
-                    var httpResponse = this.HandleRequest(httpRequest);
-
-                    this.PrepareResponse(httpResponse);
+                    httpResponse = this.HandleRequest(httpRequest);
                 }
             }
             catch (BadRequestException e)
             {
-                this.PrepareResponse(new TextResult(e.ToString(), HttpResponseStatusCode.BadRequest));
+                httpResponse = new TextResult(e.ToString(), HttpResponseStatusCode.BadRequest);
             }
             catch (Exception e)
             {
-                this.PrepareResponse(new TextResult(e.ToString(), HttpResponseStatusCode.InternalServerError));
+                httpResponse = new TextResult(e.ToString(), HttpResponseStatusCode.InternalServerError);
             }
 
+            this.PrepareResponse(httpResponse);
             this.client.Shutdown(SocketShutdown.Both);
         }
     }

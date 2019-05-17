@@ -46,7 +46,7 @@
                 return;
 
             var queryString = this.Url
-                .Split(new[] { '?' }, StringSplitOptions.None)[1];
+                .Split('?', '#')[1];
 
             var queryParameters = queryString.Split('&');
 
@@ -114,14 +114,14 @@
         }
 
         private void ParseRequestPath() =>
-            this.Path = this.Url.Split(new[] { '?' }, StringSplitOptions.RemoveEmptyEntries)[0];
+            this.Path = this.Url.Split( '?' , '#')[0];
 
         private void ParseRequestUrl(string[] requestLineParams) =>
             this.Url = requestLineParams[1];
 
         private void ParseRequestMethod(string[] requestLineParams)
         {
-            var isValidRequestMethod = Enum.TryParse<HttpRequestMethod>(requestLineParams[0].Capitalize(), out var requestMethod);
+            var isValidRequestMethod = Enum.TryParse<HttpRequestMethod>(requestLineParams[0], true, out var requestMethod);
             if (!isValidRequestMethod)
                 throw new BadRequestException(string.Format(GlobalConstants.UnsupportedHttpMethodExceptionMessage, requestLineParams[0]));
 

@@ -1,10 +1,10 @@
 ﻿namespace SIS.WebServer
 {
     using Routing.Contracts;
+    using SIS.HTTP.Common;
     using System;
     using System.Net;
     using System.Net.Sockets;
-    using System.Threading.Tasks;
 
     public class Server
     {
@@ -20,10 +20,17 @@
 
         public Server(int port, IServerRoutingTable serverRoutingTable)
         {
+            CoreValidator.ThrowIfNull(serverRoutingTable, nameof(serverRoutingTable));
+
             this.port = port;
             this.listener = new TcpListener(IPAddress.Parse(LocalhostIpAddress), port);
 
             this.serverRoutingTable = serverRoutingTable;
+        }
+        private void Listen(Socket client)
+        {
+            var connectionHandler = new ConnectionHandler(client, this.serverRoutingTable);
+            connectionHandler.ProcessRequest();
         }
 
         public void Run()
@@ -41,12 +48,6 @@
 
                 this.Listen(client);
             }
-        }
-
-        public async Task Listen(Socket client)
-        {
-            var connectionHandler = new ConnectionHandler(client, this.serverRoutingTable);
-            connectionHandler.ProcessRequest();
         }
     }
 }

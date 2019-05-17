@@ -1,5 +1,6 @@
 ﻿namespace SIS.WebServer.Routing
 {
+    using HTTP.Common;
     using HTTP.Enums;
     using HTTP.Requests.Contracts;
     using HTTP.Responses.Contracts;
@@ -22,13 +23,29 @@
             };
         }
 
-        public void Add(HttpRequestMethod method, string path, Func<IHttpRequest, IHttpResponse> func) =>
-            this.routes[method].Add(path.ToLower(), func);
+        public void Add(HttpRequestMethod requestMethod, string path, Func<IHttpRequest, IHttpResponse> func)
+        {
+            CoreValidator.ThrowIfNull(requestMethod, nameof(requestMethod));
+            CoreValidator.ThrowIfNullOrEmpty(path, nameof(path));
+            CoreValidator.ThrowIfNull(func, nameof(func));
 
-        public bool Contains(HttpRequestMethod requestMethod, string path) =>
-            this.routes.ContainsKey(requestMethod) && this.routes[requestMethod].ContainsKey(path.ToLower());
+            this.routes[requestMethod].Add(path.ToLower(), func);
+        }
 
-        public Func<IHttpRequest, IHttpResponse> Get(HttpRequestMethod requestMethod, string path) =>
-            this.routes[requestMethod][path.ToLower()];
+        public bool Contains(HttpRequestMethod requestMethod, string path)
+        {
+            CoreValidator.ThrowIfNull(requestMethod, nameof(requestMethod));
+            CoreValidator.ThrowIfNullOrEmpty(path, nameof(path));
+
+            return this.routes.ContainsKey(requestMethod) && this.routes[requestMethod].ContainsKey(path);
+        }
+
+        public Func<IHttpRequest, IHttpResponse> Get(HttpRequestMethod requestMethod, string path)
+        {
+            CoreValidator.ThrowIfNull(requestMethod, nameof(requestMethod));
+            CoreValidator.ThrowIfNullOrEmpty(path, nameof(path));
+
+            return this.routes[requestMethod][path];
+        }
     }
 }

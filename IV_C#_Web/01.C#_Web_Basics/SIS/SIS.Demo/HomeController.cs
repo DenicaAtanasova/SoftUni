@@ -9,7 +9,6 @@
     {
         public HomeController()
         {
-
         }
 
         public IHttpResponse Index(IHttpRequest request)
