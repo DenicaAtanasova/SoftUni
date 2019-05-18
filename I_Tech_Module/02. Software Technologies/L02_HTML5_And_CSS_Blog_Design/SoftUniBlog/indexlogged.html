@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SoftUni Blog</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/jquery-1.10.2.js"></script>
+    <script src="scripts/bootstrap.js"></script>
+</head>
+<body>
+<header>
+    <div class="navbar navbar-default navbar-fixed-top text-uppercase">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="index.html" class="navbar-brand">SoftUni Blog</a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Welcome{User)</a></li>
+                    <li><a href="createanewpost.html">New Post</a></li>
+                    <li><a href="index.html">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+    <div class="container body-content">
+        <div class="row">
+            <div class="col-md-6">
+                <article>
+                    <header>
+                        <h2>C# vs. Java: Which General Purpose Programming Language Is Best for You?</h2>
+                    </header>
+                    <p>
+                    <h4>WHAT IS C#?</h4>
+                    </p>
+                    <p>
+                        C# is a general purpose programming language that first appeared in 2000, as part of Microsoft’s .NET initiative. It was designed for the Common Language Infrastructure (CLI)—an open specification developed by Microsoft and standardized by ISO and ECMA. C# applications are compiled into bytecode that can run on implementations of the CLI.
+                    </p>
+                    <h4>WHAT IS JAVA?</h4>
+                    <p>
+                        Initially released by Sun Microsystems in 1995, Java is a general purpose programming language that was designed with the specific goal of allowing developers to “write once, run anywhere.” Java applications are compiled into bytecode that can run on implementations of the Java Virtual Machine (JVM). Like CLI, JVM helps bridge the gap between source code and the 1s and 0s that the computer understands.
+                    </p>
+                    <p>
+                        <strong>C# vs. Java: Major Similarities</strong>
+                    </p>
+                    <p>
+                        The origins of both Java and C# are closely tied to the transition from lower-level programming languages like C++ to higher-level programming languages that compile into bytecode that can be run on a virtual machine. This comes with a number of benefits, most notably the ability to write human readable code once that can run on any hardware architecture that has the virtual machine installed on it. Syntactic quirks aside, it’s not surprising how similar these two languages are from the top-level perspective of an application developer. Here are a few of the main similarities between C# and Java:
+                    </p>
+                    <p>
+                    <ul>
+                        <li><strong>Type-Safe. </strong>A type error occurs when the data type of one object is mistakenly assigned to another object, creating unintended side effects. Both C# and Java make a good effort to ensure that illegal casts will be caught at compile time and exceptions will be thrown out at runtime if a cast cannot be cast to a new type.</li>
+                        <li><strong>Garbage Collection. </strong>In lower-level languages, memory management can be tedious because you have to remember to properly delete new objects to free up resources. That’s not the case in C# and Java, where built-in garbage collection helps prevent memory leaks by removing objects that are no longer being used by the application. While memory leaks can still occur, the basics of memory management have already been taken care of for you.</li>
+                        <li><strong>Single Inheritance. </strong>Both C# and Java support single inheritance—meaning only one path exists from any base class to any of its derived classes. This limits unintended side effects that can occur when multiple paths exist between multiple base classes and derived classes. The diamond pattern is a textbook example of this problem.</li>
+                        <li><strong>Interfaces. </strong>An interface is an abstract class where all methods are abstract. An abstract method is one that is declared but does not contain the details of its implementation. The code governing any methods or properties defined by the interface must be supplied by the class that implements it. This helps avoid the ambiguity of the diamond pattern, because it’s always clear which base class is implementing a given derived class during runtime. The result is the clean, linear class hierarchy of single inheritance combined with some of the versatility of multiple inheritance. In fact, using abstract classes is one way multiple inheritance languages can overcome the diamond pattern.</li>
+                    </ul>
+                    </p>
+                    <p>
+                        <strong>C# vs. Java: Major Differences</strong>
+                    </p>
+                    <p>
+                    <ul>
+                        <li><strong>Windows vs. Open-Source. </strong>While open-source implementations exist, C# is mostly used to develop for Microsoft platforms—the .NET Framework’s CLR being the most widely used implementation of the CLI. On the other end of the spectrum, Java has a huge open-source ecosystem and gained a second wind in spite of its age, thanks in part to Google adopting the JVM for Android.</li>
+                        <li><strong>Support for Generics. </strong>Generics improve compiler-assisted checking of types largely by removing casts from source code. In Java, generics are implemented using erasures. Generic type parameters are “erased” and casts are added upon compilation into bytecode. C# takes generics even further by integrating it into the CLI and allowing type information to be available at runtime, yielding a slight performance gain.</li>
+                        <li><strong>Support for Delegates (Pointers). </strong>C# has delegates which essentially serve as methods that can be called without knowledge of the target object. To achieve the same functionality in Java, you need to use an interface with a single method or some other workaround that may require a nontrivial amount of additional code, depending on the application.</li>
+                        <li><strong>Checked Exceptions. </strong>Java distinguishes between two types of exceptions—checked and unchecked. C# chose a more minimalist approach by only having one type of exception. While the ability to catch exceptions can be useful, it can also have an adverse effect on scalability and version control.</li>
+                        <li><strong>Polymorphism: </strong>C# and Java take very different approaches to polymorphism. While Java enables polymorphism by default, C# must invoke the “virtual” keyword in a base class and the “override” keyword in a derived class.</li>
+                        <li><strong>Enumerations (Enums): </strong>In C#, enums are simple lists of named constants where the underlying type must be integral. Java takes the enum further by treating it as a named instance of a type, making it easier to add custom behavior to individual enums.</li>
+                    </ul>
+                    </p>
+                    <p>
+                    <h4>WHEN SHOULD YOU USE C# OR JAVA?</h4>
+                    </p>
+                    <p>
+                        With so much in common, the language you ultimately choose to use will depend largely upon the platform you have chosen for your project. Today, C# is used primarily on the .NET Framework, Mono, and Portable.NET implementations of the CLI. If your software or web application is being built for Windows, C# will work best with the .NET suite of technologies.
+                    </p>
+                    <p>
+                        That said, if you wish to develop for Unix, Linux, or other platforms outside of the Microsoft platform, Java’s large open-source ecosystem is the better choice. The community is constantly creating new libraries and tools. New powerful languages like Scala, Clojure, and Groovy have also appeared, all based off of the JVM. It also doesn’t hurt that most JVM implementations are open-source and free. Java is also the main language used by Google to develop for Android, which is currently the largest mobile operating system in the world.
+                    </p>
+                    <p>
+                        Keep in mind that the advantages listed above are slight, and neither language is likely to disappear anytime soon. Both languages have been around long enough that there’s not really anything you can’t build in one that you couldn’t build in the other. Bottom line: Choose the language that works best for your project’s platform of choice.
+                    </p>
+                    <small class="author">YOSHITAKA SHIOTSU
+                    </small>
+
+                    <footer>
+                        <div class="pull-right">
+                            <a class="btn btn-default btn-xs" href="viewpost.html">Read more &raquo;</a>
+                        </div>
+                    </footer>
+                </article>
+
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="container modal-footer pull-left"></div>
+    <p>&copy; 2016 - Software University Foundation</p>
+</footer>
+</body>
+</html>
