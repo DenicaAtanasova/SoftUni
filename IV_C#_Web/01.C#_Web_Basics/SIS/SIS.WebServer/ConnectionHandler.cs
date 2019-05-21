@@ -11,6 +11,7 @@
     using System;
     using System.Net.Sockets;
     using System.Text;
+    using System.Threading.Tasks;
 
     public class ConnectionHandler
     {
@@ -26,14 +27,14 @@
             this.serverRoutingTable = serverRoutingTable;
         }
 
-        private IHttpRequest ReadRequest()
+        private async Task<IHttpRequest> ReadRequestAsync()
         {
             var result = new StringBuilder();
             var data = new ArraySegment<byte>(new byte[1024]);
 
             while (true)
             {
-                int numberOfBytesRead = this.client.Receive(data.Array, SocketFlags.None);
+                int numberOfBytesRead = await this.client.ReceiveAsync(data, SocketFlags.None);
 
                 if (numberOfBytesRead == 0)
                 {
@@ -65,19 +66,19 @@
             return this.serverRoutingTable.Get(httpRequest.RequestMethod, httpRequest.Path).Invoke(httpRequest);
         }
 
-        private void PrepareResponse(IHttpResponse httpResponse)
+        private async Task PrepareResponseAsync(IHttpResponse httpResponse)
         {
-            var byteSegment = httpResponse.GetBytes();
+            var byteSegments = new ArraySegment<byte>(httpResponse.GetBytes());
 
-            this.client.Send(byteSegment, SocketFlags.None);
+            await this.client.SendAsync(byteSegments, SocketFlags.None);
         }
 
-        public void ProcessRequest()
+        public async Task ProcessRequestAsync()
         {
             IHttpResponse httpResponse = null;
             try
             {
-                var httpRequest = this.ReadRequest();
+                var httpRequest = await this.ReadRequestAsync();
 
                 if (httpRequest != null)
                 {
@@ -95,7 +96,7 @@
                 httpResponse = new TextResult(e.ToString(), HttpResponseStatusCode.InternalServerError);
             }
 
-            this.PrepareResponse(httpResponse);
+            await this.PrepareResponseAsync(httpResponse);
             this.client.Shutdown(SocketShutdown.Both);
         }
     }
