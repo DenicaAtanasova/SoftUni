@@ -4,8 +4,10 @@
 
     public class HttpHeader
     {
-        public static string ContentType = "Content-Type";
-        public static string Location = "Location";
+        public const string ContentType = "Content-Type";
+        public const string Location = "Location";
+        public const string Cookie = "Cookie";
+
         public HttpHeader(string key, string value)
         {
             CoreValidator.ThrowIfNullOrEmpty(key, nameof(key));

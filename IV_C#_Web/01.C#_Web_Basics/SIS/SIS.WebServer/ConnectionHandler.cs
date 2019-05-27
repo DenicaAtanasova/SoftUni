@@ -1,6 +1,7 @@
 ﻿namespace SIS.WebServer
 {
     using HTTP.Common;
+    using HTTP.Cookies;
     using HTTP.Enums;
     using HTTP.Exceptions;
     using HTTP.Requests;
@@ -8,6 +9,7 @@
     using HTTP.Responses.Contracts;
     using Results;
     using Routing.Contracts;
+    using Sessions;
     using System;
     using System.Net.Sockets;
     using System.Text;
@@ -73,9 +75,34 @@
             await this.client.SendAsync(byteSegments, SocketFlags.None);
         }
 
+        private string SetRequestSession(IHttpRequest httpRequest)
+        {
+            string sessionId = null;
+
+            if (httpRequest.Cookies.ContainsCookie(HttpSessionStorage.SessionCookieKey))
+            {
+                var cookie = httpRequest.Cookies.GetCookie(HttpSessionStorage.SessionCookieKey);
+                sessionId = cookie.Value;
+            }
+            else
+            {
+                sessionId = Guid.NewGuid().ToString();
+            }
+            httpRequest.Session = HttpSessionStorage.GetSession(sessionId);
+
+            return httpRequest.Session.Id;
+        }
+
+        private void SetResponseSession(IHttpResponse httpResponse, string sessionId)
+        {
+            if (sessionId != null)
+                httpResponse.AddCookie(new HttpCookie(HttpSessionStorage.SessionCookieKey, sessionId));
+        }
+
         public async Task ProcessRequestAsync()
         {
             IHttpResponse httpResponse = null;
+
             try
             {
                 var httpRequest = await this.ReadRequestAsync();
@@ -84,7 +111,9 @@
                 {
                     Console.WriteLine($"Processing: {httpRequest.RequestMethod} {httpRequest.Path}...");
 
+                    var sessionId = this.SetRequestSession(httpRequest);
                     httpResponse = this.HandleRequest(httpRequest);
+                    this.SetResponseSession(httpResponse, sessionId);
                 }
             }
             catch (BadRequestException e)

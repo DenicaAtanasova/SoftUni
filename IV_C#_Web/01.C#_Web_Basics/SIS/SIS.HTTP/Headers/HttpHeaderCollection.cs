@@ -34,6 +34,7 @@
             return this.headers[key];
         }
 
-        public override string ToString() => string.Join(GlobalConstants.HttpNewLine, this.headers.Values);
+        public override string ToString() => 
+            string.Join(GlobalConstants.HttpNewLine, this.headers.Values);
     }
 }
