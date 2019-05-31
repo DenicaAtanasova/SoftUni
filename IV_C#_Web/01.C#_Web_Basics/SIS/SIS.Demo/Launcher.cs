@@ -9,6 +9,7 @@
         static void Main(string[] args)
         {
             var port = 8000;
+
             var serverRoutingTable = new ServerRoutingTable();
             serverRoutingTable.Add(
                 HttpRequestMethod.Get,
