@@ -31,23 +31,11 @@
         </header>
         <hr class="bg-success mt-2" style="height: 2px" />
         <main>
-            <h1 class="text-center text-success">Create Album</h1>
-            <hr class="bg-success w-50" style="height: 2px" />
-            <form class="w-50 mx-auto" action="/Albums/Create" method="POST">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" class="form-control" id="name" name="name" placeholder="Name..." />
-                </div>
-                <div class="form-group mb-5">
-                    <label for="cover">Cover</label>
-                    <input type="text" class="form-control" id="cover" name="cover" placeholder="Cover..." />
-                </div>
-                <hr class="bg-success mt-5" style="height: 2px" />
-                <div class="d-flex justify-content-around mt-4">
-                    <button class="btn btn-success" type="submit">Create</button>
-                    <a class="btn bg-success text-white" href="/Albums/All">Back To All</a>
-                </div>
-            </form>
+            <div class="jumbotron bg-success text-white">
+                <h1>Welcome, <span class="text-warning">@Model.Username</span></h1>
+                <hr class="bg-white" style="height: 2px" />
+                <h2>IRunes wishes you a fun experience.</h2>
+            </div>
         </main>
         <hr class="bg-success mt-5" style="height: 2px" />
         <footer>

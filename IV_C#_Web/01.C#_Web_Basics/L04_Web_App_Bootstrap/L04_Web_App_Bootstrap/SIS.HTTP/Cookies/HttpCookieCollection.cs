@@ -19,6 +19,9 @@ namespace SIS.HTTP.Cookies
         {
             CoreValidator.ThrowIfNull(httpCookie, nameof(httpCookie));
 
+            if (this.ContainsCookie(httpCookie.Key))
+                return;
+
             this.httpCookies.Add(httpCookie.Key, httpCookie);
         }
 

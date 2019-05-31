@@ -1,5 +1,7 @@
 ﻿using System;
+using System.IO;
 using System.Net.Sockets;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using SIS.HTTP.Common;
@@ -62,15 +64,36 @@ namespace SIS.WebServer
             return new HttpRequest(result.ToString());
         }
 
-        private IHttpResponse HandleRequest(IHttpRequest httpRequest)
+        private IHttpResponse ReturnIfResource(IHttpRequest httpRequest)
         {
-            // EXECUTE FUNCTION FOR CURRENT REQUEST -> RETURNS RESPONSE
-            if (!this.serverRoutingTable.Contains(httpRequest.RequestMethod, httpRequest.Path))
+            var folderPrefix = "/../../../../";
+            var assemblyLocation = Assembly.GetExecutingAssembly().Location;
+            var resourceFolderPath = "Resources/";
+            var requestResource = httpRequest.Path;
+
+            var fullResourcesPath = assemblyLocation + folderPrefix + resourceFolderPath + requestResource;
+
+            if (File.Exists(fullResourcesPath))
+            {
+                var content = File.ReadAllBytes(fullResourcesPath);
+                return new InlineResourceResult(content, HttpResponseStatusCode.Found);
+            }
+            else
             {
                 return new TextResult($"Route with method {httpRequest.RequestMethod} and path \"{httpRequest.Path}\" not found.", HttpResponseStatusCode.NotFound);
             }
+        }
 
-            return this.serverRoutingTable.Get(httpRequest.RequestMethod, httpRequest.Path).Invoke(httpRequest);
+        private IHttpResponse HandleRequest(IHttpRequest httpRequest)
+        {
+            if (!this.serverRoutingTable.Contains(httpRequest.RequestMethod, httpRequest.Path))
+            {
+                return this.ReturnIfResource(httpRequest);
+            }
+
+            return this.serverRoutingTable
+                .Get(httpRequest.RequestMethod, httpRequest.Path)
+                .Invoke(httpRequest);
         }
 
         private string SetRequestSession(IHttpRequest httpRequest)
@@ -133,6 +156,7 @@ namespace SIS.WebServer
             }
             catch (Exception e)
             {
+                var result = e.InnerException.Message;
                 httpResponse = new TextResult(e.Message, HttpResponseStatusCode.InternalServerError);
             }
             this.PrepareResponse(httpResponse);
