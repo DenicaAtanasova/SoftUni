@@ -1,18 +1,17 @@
-﻿namespace SIS.HTTP.Cookies
-{
-    using Contracts;
-    using Common;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Linq;
+﻿using System.Collections;
+using System.Collections.Generic;
+using System.Text;
+using SIS.HTTP.Common;
 
+namespace SIS.HTTP.Cookies
+{
     public class HttpCookieCollection : IHttpCookieCollection
     {
-        private Dictionary<string, HttpCookie> cookies;
+        private Dictionary<string, HttpCookie> httpCookies;
 
         public HttpCookieCollection()
         {
-            this.cookies = new Dictionary<string, HttpCookie>();
+            this.httpCookies = new Dictionary<string, HttpCookie>();
         }
 
         public void AddCookie(HttpCookie httpCookie)
@@ -22,33 +21,50 @@
             if (this.ContainsCookie(httpCookie.Key))
                 return;
 
-            this.cookies.Add(httpCookie.Key, httpCookie);
+            this.httpCookies.Add(httpCookie.Key, httpCookie);
         }
 
         public bool ContainsCookie(string key)
         {
             CoreValidator.ThrowIfNullOrEmpty(key, nameof(key));
 
-            return this.cookies.ContainsKey(key);
+            return this.httpCookies.ContainsKey(key);
         }
 
         public HttpCookie GetCookie(string key)
         {
             CoreValidator.ThrowIfNullOrEmpty(key, nameof(key));
 
-            return this.cookies[key];
+            // TODO: Validation for existing parameter (maybe throw exception)
+
+            return this.httpCookies[key];
         }
 
-        public bool HasCookie() =>
-            this.cookies.Count != 0;
+        public bool HasCookies()
+        {
+            return this.httpCookies.Count != 0;
+        }
 
-        public IEnumerator<HttpCookie> GetEnumerator() =>
-            this.cookies.Values.GetEnumerator();
+        public IEnumerator<HttpCookie> GetEnumerator()
+        {
+            return this.httpCookies.Values.GetEnumerator();
+        }
 
-        IEnumerator IEnumerable.GetEnumerator() =>
-            this.GetEnumerator();
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
 
-        public override string ToString() =>
-            string.Join(GlobalConstants.HttpNewLine, this.cookies.Values.Select(cookie => $"Set-Cookie: {cookie}"));
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+
+            foreach (var cookie in this.httpCookies.Values)
+            {                
+                sb.Append($"Set-Cookie: {cookie}").Append(GlobalConstants.HttpNewLine);
+            }
+
+            return sb.ToString();
+        }
     }
 }

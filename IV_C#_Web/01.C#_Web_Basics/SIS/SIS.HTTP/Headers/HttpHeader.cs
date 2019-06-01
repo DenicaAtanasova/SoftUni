@@ -1,7 +1,7 @@
-﻿namespace SIS.HTTP.Headers
-{
-    using Common;
+﻿using SIS.HTTP.Common;
 
+namespace SIS.HTTP.Headers
+{
     public class HttpHeader
     {
         public const string ContentType = "Content-Type";
@@ -14,7 +14,6 @@
         {
             CoreValidator.ThrowIfNullOrEmpty(key, nameof(key));
             CoreValidator.ThrowIfNullOrEmpty(value, nameof(value));
-
             this.Key = key;
             this.Value = value;
         }

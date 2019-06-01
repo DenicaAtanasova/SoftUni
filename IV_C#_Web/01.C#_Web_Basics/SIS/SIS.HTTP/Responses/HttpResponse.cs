@@ -1,13 +1,10 @@
 ﻿namespace SIS.HTTP.Responses
 {
     using Common;
-    using Contracts;
     using Cookies;
-    using Cookies.Contracts;
     using Enums;
+    using Extensions;
     using Headers;
-    using Headers.Contracts;
-    using System.Linq;
     using System.Text;
 
     public class HttpResponse : IHttpResponse
@@ -19,11 +16,9 @@
             this.Content = new byte[0];
         }
 
-        public HttpResponse(HttpResponseStatusCode statusCode)
-            :this()
+        public HttpResponse(HttpResponseStatusCode statusCode) : this()
         {
             CoreValidator.ThrowIfNull(statusCode, nameof(statusCode));
-
             this.StatusCode = statusCode;
         }
 
@@ -31,41 +26,53 @@
 
         public IHttpHeaderCollection Headers { get; }
 
-        public IHttpCookieCollection Cookies { get; set; }
+        public IHttpCookieCollection Cookies { get; }
 
-        public byte[] Content { get ; set; }
+        public byte[] Content { get; set; }
 
         public void AddHeader(HttpHeader header)
         {
-            CoreValidator.ThrowIfNull(header, nameof(header));
-
             this.Headers.AddHeader(header);
         }
 
         public void AddCookie(HttpCookie cookie)
         {
-            CoreValidator.ThrowIfNull(cookie, nameof(cookie));
-
             this.Cookies.AddCookie(cookie);
         }
 
-        public byte[] GetBytes() => 
-            Encoding.UTF8.GetBytes(this.ToString()).Concat(this.Content).ToArray();
+        public byte[] GetBytes()
+        {
+            var httpResponseBytesWithoutBody = Encoding.UTF8.GetBytes(this.ToString());
+
+            var httpResponseBytesWithBody = new byte[httpResponseBytesWithoutBody.Length + this.Content.Length];
+
+            for (int i = 0; i < httpResponseBytesWithoutBody.Length; i++)
+            {
+                httpResponseBytesWithBody[i] = httpResponseBytesWithoutBody[i];
+            }
+
+            for (int i = 0; i < httpResponseBytesWithBody.Length - httpResponseBytesWithoutBody.Length; i++)
+            {
+                httpResponseBytesWithBody[i + httpResponseBytesWithoutBody.Length] = this.Content[i];
+            }
+
+            return httpResponseBytesWithBody;
+        }
 
         public override string ToString()
         {
+
             var result = new StringBuilder();
 
             result
-                .Append($"{GlobalConstants.HttpOneProtocolFragment} {(int)this.StatusCode} {this.StatusCode.ToString()}")
+                .Append($"{GlobalConstants.HttpOneProtocolFragment} {this.StatusCode.GetStatusLine()}")
                 .Append(GlobalConstants.HttpNewLine)
-                .Append(this.Headers)
-                .Append(GlobalConstants.HttpNewLine);
+                .Append($"{this.Headers}").Append(GlobalConstants.HttpNewLine);
 
-            if(this.Cookies.HasCookie())
-                result
-                    .Append(this.Cookies)
-                    .Append(GlobalConstants.HttpNewLine);
+            if (this.Cookies.HasCookies())
+            {
+                result.Append($"{this.Cookies}").Append(GlobalConstants.HttpNewLine);
+            }
 
             result.Append(GlobalConstants.HttpNewLine);
 
