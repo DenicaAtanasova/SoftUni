@@ -1,6 +1,7 @@
 ﻿namespace SIS.MvcFramework
 {
-    using Attributes;
+    using Attributes.Action;
+    using Attributes.Http;
     using HTTP.Enums;
     using HTTP.Responses;
     using Routing;
@@ -31,13 +32,14 @@
             {
                 var actions = controller
                     .GetMethods(BindingFlags.DeclaredOnly | BindingFlags.Public | BindingFlags.Instance)
-                    .Where(a => !a.IsSpecialName && a.DeclaringType == controller);
+                    .Where(x => !x.IsSpecialName && x.DeclaringType == controller)
+                    .Where(x => x.GetCustomAttributes().All(a => a.GetType() != typeof(NonActionAttribute)));
 
                 foreach (var action in actions)
                 {
                     var path = $"/{controller.Name.Replace("Controller", string.Empty)}/{action.Name}";
                     var attribute = action.GetCustomAttributes()
-                        .Where(a => a.GetType().IsSubclassOf(typeof(BaseHttpAttribute)))
+                        .Where(x => x.GetType().IsSubclassOf(typeof(BaseHttpAttribute)))
                         .LastOrDefault() as BaseHttpAttribute;
 
                     var httpMethod = HttpRequestMethod.Get;
