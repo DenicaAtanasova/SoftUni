@@ -5,10 +5,10 @@
     using HTTP.Enums;
     using HTTP.Exceptions;
     using HTTP.Requests;
+    using HTTP.Responses;
     using Result;
     using Routing;
     using Sessions;
-    using SIS.HTTP.Responses;
     using System;
     using System.IO;
     using System.Net.Sockets;
@@ -64,7 +64,7 @@
 
         private IHttpResponse ReturnIfResource(IHttpRequest httpRequest)
         {
-            var folderPrefix = "/../../../../";
+            var folderPrefix = "/../";
             var assemblyLocation = Assembly.GetExecutingAssembly().Location;
             var resourceFolderPath = "Resources/";
             var requestResource = httpRequest.Path;
@@ -116,9 +116,7 @@
         {
             if (sessionId != null)
             {
-                httpResponse.Cookies
-                    .AddCookie(new HttpCookie(HttpSessionStorage
-                        .SessionCookieKey, sessionId));
+                httpResponse.AddCookie(new HttpCookie(HttpSessionStorage.SessionCookieKey, sessionId));
             }
         }
 

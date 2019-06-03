@@ -8,10 +8,6 @@
     {
         HttpResponseStatusCode StatusCode { get; set; }
 
-        IHttpHeaderCollection Headers { get; }
-
-        IHttpCookieCollection Cookies { get; }
-
         byte[] Content { get; set; }
 
         void AddHeader(HttpHeader header);

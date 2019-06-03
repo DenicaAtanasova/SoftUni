@@ -9,10 +9,13 @@
 
     public class HttpResponse : IHttpResponse
     {
+        private readonly IHttpHeaderCollection headers;
+        private readonly IHttpCookieCollection cookies;
+
         public HttpResponse()
         {
-            this.Headers = new HttpHeaderCollection();
-            this.Cookies = new HttpCookieCollection();
+            this.headers = new HttpHeaderCollection();
+            this.cookies = new HttpCookieCollection();
             this.Content = new byte[0];
         }
 
@@ -24,20 +27,16 @@
 
         public HttpResponseStatusCode StatusCode { get; set; }
 
-        public IHttpHeaderCollection Headers { get; }
-
-        public IHttpCookieCollection Cookies { get; }
-
         public byte[] Content { get; set; }
 
         public void AddHeader(HttpHeader header)
         {
-            this.Headers.AddHeader(header);
+            this.headers.AddHeader(header);
         }
 
         public void AddCookie(HttpCookie cookie)
         {
-            this.Cookies.AddCookie(cookie);
+            this.cookies.AddCookie(cookie);
         }
 
         public byte[] GetBytes()
@@ -67,11 +66,11 @@
             result
                 .Append($"{GlobalConstants.HttpOneProtocolFragment} {this.StatusCode.GetStatusLine()}")
                 .Append(GlobalConstants.HttpNewLine)
-                .Append($"{this.Headers}").Append(GlobalConstants.HttpNewLine);
+                .Append($"{this.headers}").Append(GlobalConstants.HttpNewLine);
 
-            if (this.Cookies.HasCookies())
+            if (this.cookies.HasCookies())
             {
-                result.Append($"{this.Cookies}").Append(GlobalConstants.HttpNewLine);
+                result.Append($"{this.cookies}").Append(GlobalConstants.HttpNewLine);
             }
 
             result.Append(GlobalConstants.HttpNewLine);

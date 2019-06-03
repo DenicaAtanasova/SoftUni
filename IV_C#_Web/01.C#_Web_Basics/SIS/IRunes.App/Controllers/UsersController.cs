@@ -1,11 +1,13 @@
 ﻿namespace IRunes.App.Controllers
 {
-    using Data;
     using Models;
-    using SIS.HTTP.Requests;
-    using SIS.HTTP.Responses;
+    using Services;
+
     using SIS.MvcFramework;
+    using SIS.MvcFramework.Attributes.Action;
     using SIS.MvcFramework.Attributes.Http;
+    using SIS.MvcFramework.Result;
+
     using System.Collections.Generic;
     using System.Linq;
     using System.Security.Cryptography;
@@ -13,80 +15,76 @@
 
     public class UsersController : Controller
     {
-        public IHttpResponse Login(IHttpRequest httpRequest)
+        private readonly IUserService userService;
+
+        public UsersController()
+        {
+            this.userService = new UserService();
+        }
+
+        public ActionResult Login()
         {
             return this.View();
         }
 
-        public IHttpResponse Register(IHttpRequest httpRequest)
+        public ActionResult Register()
         {
             return this.View();
         }
 
-        public IHttpResponse Logout(IHttpRequest httpRequest)
+        public ActionResult Logout()
         {
-            this.SignOut(httpRequest);
+            this.SignOut();
 
             return this.Redirect("/");
         }
 
+        [HttpPost(ActionName = "Login")]
+        public ActionResult DoLogin()
+        {
+            var username = ((ISet<string>)this.Request.FormData["username"]).FirstOrDefault();
+            var password = ((ISet<string>)this.Request.FormData["password"]).FirstOrDefault();
+
+            var userFromDb = this.userService.GetUserByUsernameAndPassword(username, this.HashPassword(password));
+
+            if (userFromDb == null)
+                return this.Redirect("/Users/Login");
+
+            this.SignIn(userFromDb.Id, userFromDb.Username, userFromDb.Email);
+
+            return this.Redirect("/");
+        }
+
+        [HttpPost(ActionName = "Register")]
+        public ActionResult DoRegister()
+        {
+            var username = ((ISet<string>)this.Request.FormData["username"]).FirstOrDefault();
+            var password = ((ISet<string>)this.Request.FormData["password"]).FirstOrDefault();
+            var confirmPassword = ((ISet<string>)this.Request.FormData["confirmPassword"]).FirstOrDefault();
+            var email = ((ISet<string>)this.Request.FormData["email"]).FirstOrDefault();
+
+            if (password != confirmPassword)
+                return this.Redirect("/Users/Register");
+
+            var user = new User
+            {
+                Username = username,
+                Password = this.HashPassword(password),
+                Email = email
+            };
+
+            this.userService.CreateUser(user);
+
+            return this.Redirect("/Users/Login");
+        }
+
+        [NonAction]
         private string HashPassword(string password)
         {
             using (var hash = SHA256.Create())
             {
                 return Encoding.UTF8.GetString(hash.ComputeHash(Encoding.UTF8.GetBytes(password)));
             }
-        }
-
-        [HttpPost(ActionName = "Login")]
-        public IHttpResponse DoLogin(IHttpRequest httpRequest)
-        {
-            using (var context = new RunesDbContext())
-            {
-                var username = ((ISet<string>)httpRequest.FormData["username"]).FirstOrDefault();
-                var password = ((ISet<string>)httpRequest.FormData["password"]).FirstOrDefault();
-
-                var currentUser = context.Users
-                    .Where(user =>
-                        (user.Username == username ||
-                        user.Email == username) &&
-                        user.Password == this.HashPassword(password))
-                    .FirstOrDefault();
-
-                if (currentUser == null)
-                    return this.Redirect("/Users/Login");
-
-                this.SignIn(httpRequest, currentUser.Id, currentUser.Username, currentUser.Email);
-            }
-
-            return this.Redirect("/");
-        }
-
-        [HttpPost(ActionName = "Register")]
-        public IHttpResponse DoRegister(IHttpRequest httpRequest)
-        {
-            using (var context = new RunesDbContext())
-            {
-                var username = ((ISet<string>)httpRequest.FormData["username"]).FirstOrDefault();
-                var password = ((ISet<string>)httpRequest.FormData["password"]).FirstOrDefault();
-                var confirmPassword = ((ISet<string>)httpRequest.FormData["confirmPassword"]).FirstOrDefault();
-                var email = ((ISet<string>)httpRequest.FormData["email"]).FirstOrDefault();
-
-                if (password != confirmPassword)
-                    return this.Redirect("/Users/Register");
-
-                var user = new User
-                {
-                    Username = username,
-                    Password = this.HashPassword(password),
-                    Email = email
-                };
-
-                context.Users.Add(user);
-                context.SaveChanges();
-            }
-
-            return this.Redirect("/Users/Login");
         }
     }
 }

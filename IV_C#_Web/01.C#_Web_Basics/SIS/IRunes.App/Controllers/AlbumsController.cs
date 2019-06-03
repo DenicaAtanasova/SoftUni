@@ -3,94 +3,79 @@
     using Extensions;
     using Data;
     using Models;
-    using Microsoft.EntityFrameworkCore;
-    using SIS.HTTP.Requests;
-    using SIS.HTTP.Responses;
+    using Services;
+
     using SIS.MvcFramework;
     using SIS.MvcFramework.Attributes.Http;
+    using SIS.MvcFramework.Result;
+    using SIS.MvcFramework.Security;
+
     using System.Collections.Generic;
     using System.Linq;
 
     public class AlbumsController : Controller
     {
-        public IHttpResponse All(IHttpRequest httpRequest)
+        private IAlbumService albumService;
+
+        public AlbumsController()
         {
-            if (!this.IsLoggedIn(httpRequest))
-                return this.Redirect("/Users/Login");
+            this.albumService = new AlbumService();
+        }
 
-            using (var context = new RunesDbContext())
+        [Authorize]
+        public ActionResult All()
+        {
+            ICollection<Album> allAlbums = this.albumService.GetAllAlbums();
+
+            if (allAlbums.Count == 0)
             {
-                ICollection<Album> allAlbums = context.Albums.ToList();
-
-                if (allAlbums.Count == 0)
-                {
-                    this.ViewData["Albums"] = "There are currently no albums.";
-                }
-                else
-                {
-                    this.ViewData["Albums"] = 
-                        string.Join(string.Empty,
-                        allAlbums.Select(album => album.ToHtmlAll()).ToList());
-                }
+                this.ViewData["Albums"] = "There are currently no albums.";
+            }
+            else
+            {
+                this.ViewData["Albums"] = 
+                    string.Join(string.Empty,
+                    allAlbums.Select(album => album.ToHtmlAll()).ToList());
             }
 
             return this.View();
         }
 
-        public IHttpResponse Create(IHttpRequest httpRequest)
+        [Authorize()]
+        public ActionResult Create()
         {
-            if (!this.IsLoggedIn(httpRequest))
-                return this.Redirect("/Users/Login");
-
             return this.View();
         }
 
-        public IHttpResponse Details(IHttpRequest httpRequest)
+        [Authorize()]
+        public ActionResult Details()
         {
-            if (!this.IsLoggedIn(httpRequest))
-                return this.Redirect("/Users/Login");
+            var albumId = this.Request.QueryData["id"].ToString();
+            var albumFromDb = this.albumService.GetAlbumById(albumId);
 
-            using (var context = new RunesDbContext())
-            {
-                var albumId = httpRequest.QueryData["id"].ToString();
-                var currentAlbum = context.Albums
-                    .Include(album => album.Tracks)
-                    .FirstOrDefault(album => album.Id == albumId);
-
-                if (currentAlbum == null)
+            if (albumFromDb == null)
                     return this.Redirect("/Albums/All");
 
-                this.ViewData["Album"] = currentAlbum.ToHtmlDetails();
-            }
+            this.ViewData["Album"] = albumFromDb.ToHtmlDetails();
 
             return this.View();
         }
 
+        [Authorize()]
         [HttpPost(ActionName = "Create")]
-        public IHttpResponse DoCreate(IHttpRequest httpRequest)
+        public ActionResult DoCreate()
         {
-            if (!this.IsLoggedIn(httpRequest))
-                return this.Redirect("/Users/Login");
+            var name = ((ISet<string>)this.Request.FormData["name"]).FirstOrDefault();
+            var cover = ((ISet<string>)this.Request.FormData["cover"]).FirstOrDefault();
 
-            using (var context = new RunesDbContext())
+            var album = new Album
             {
-                var name = ((ISet<string>)httpRequest.FormData["name"]).FirstOrDefault();
-                var cover = ((ISet<string>)httpRequest.FormData["cover"]).FirstOrDefault();
+                Name = name,
+                Cover = cover,
+                Price = 0M
+            };
 
-                var album = new Album
-                {
-                    Name = name,
-                    Cover = cover,
-                    Price = 0M
-                };
-
-                if (album == null)
-                    this.Redirect("/Albums/Create");
-
-                context.Albums.Add(album);
-                context.SaveChanges();
-            }
-
+            this.albumService.CreateAlbum(album);
             return this.Redirect("/Albums/All");
         }
     }

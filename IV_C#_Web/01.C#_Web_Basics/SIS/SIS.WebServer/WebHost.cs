@@ -4,7 +4,9 @@
     using Attributes.Http;
     using HTTP.Enums;
     using HTTP.Responses;
+    using Result;
     using Routing;
+    using Security;
     using System.Linq;
     using System.Reflection;
     using System;
@@ -13,7 +15,7 @@
     {
         public static void Start(IMvcApplication application)
         {
-            var serverRoutingTable = new ServerRoutingTable();
+            IServerRoutingTable serverRoutingTable = new ServerRoutingTable();
             AutoRegisterRoutes(application, serverRoutingTable);
 
             application.ConfigureServices();
@@ -55,8 +57,17 @@
 
                     serverRoutingTable.Add(httpMethod, path, request =>
                     {
-                        var controllerInstance = Activator.CreateInstance(controller);
-                        var response = action.Invoke(controllerInstance, new[] { request }) as IHttpResponse;
+                        var controllerInstance = Activator.CreateInstance(controller) as Controller;
+                        controllerInstance.Request = request;
+
+                        var controllerPrincipal = controllerInstance.User;
+                        var authorizedAttribute = action.GetCustomAttributes()
+                            .LastOrDefault(x => x.GetType() == typeof(AuthorizeAttribute)) as AuthorizeAttribute;
+
+                        if (authorizedAttribute != null && !authorizedAttribute.IsInAuthority(controllerPrincipal))
+                            return new HttpResponse(HttpResponseStatusCode.Forbidden);
+
+                        var response = action.Invoke(controllerInstance, null) as ActionResult;
                         return response;
                     });
                 }

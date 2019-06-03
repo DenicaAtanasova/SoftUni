@@ -3,84 +3,75 @@
     using Extensions;
     using Data;
     using Models;
-    using SIS.HTTP.Requests;
-    using SIS.HTTP.Responses;
+    using Services;
+
     using SIS.MvcFramework;
     using SIS.MvcFramework.Attributes.Http;
+    using SIS.MvcFramework.Result;
+    using SIS.MvcFramework.Security;
+
     using System.Collections.Generic;
     using System.Linq;
 
     public class TracksController : Controller
     {
-        public IHttpResponse Create(IHttpRequest httpRequest)
-        {
-            if (!this.IsLoggedIn(httpRequest))
-                return this.Redirect("/Users/Login");
+        private readonly ITrackService trackService;
+        private readonly IAlbumService albumService;
 
-            var albumId = httpRequest.QueryData["albumId"].ToString();
+        public TracksController()
+        {
+            this.trackService = new TrackService();
+            this.albumService = new AlbumService();
+        }
+
+        [Authorize]
+        public ActionResult Create()
+        {
+            var albumId = this.Request.QueryData["albumId"].ToString();
             this.ViewData["AlbumId"] = albumId;
 
             return this.View();
         }
 
-        public IHttpResponse Details(IHttpRequest httpRequest)
+        [Authorize]
+        public ActionResult Details()
         {
-            if (!this.IsLoggedIn(httpRequest))
-                return this.Redirect("/Users/Login");
+            var albumId = this.Request.QueryData["albumId"].ToString();
+            var trackId = this.Request.QueryData["trackId"].ToString();
 
-            var albumId = httpRequest.QueryData["albumId"].ToString();
+            var trackFromDb = this.trackService.GetTrackById(trackId);
 
-            using (var context = new RunesDbContext())
-            {
-                var trackId = httpRequest.QueryData["trackId"].ToString();
-                var currentTrack = context.Tracks
-                    .FirstOrDefault(track => track.Id == trackId);
+            if (trackFromDb == null)
+                return this.Redirect($"/Albums/Details?id={albumId}");
 
-                if (currentTrack == null)
-                    return this.Redirect($"/Albums/Details?id={albumId}");
-
-                this.ViewData["AlbumId"] = albumId;
-                this.ViewData["Track"] = currentTrack.ToHtmlDetails(albumId);
-            }
+            this.ViewData["AlbumId"] = albumId;
+            this.ViewData["Track"] = trackFromDb.ToHtmlDetails(albumId);
 
             return this.View();
         }
 
+        [Authorize]
         [HttpPost(ActionName = "Create")]
-        public IHttpResponse DoCreate(IHttpRequest httpRequest)
+        public ActionResult DoCreate()
         {
-            if(!this.IsLoggedIn(httpRequest))
-                return this.Redirect("/Users/Login");
+            var albumId = this.Request.QueryData["albumId"].ToString();
+            var albumFromDb = this.albumService.GetAlbumById(albumId);
 
-            var albumId = httpRequest.QueryData["albumId"].ToString();
+            this.ViewData["AlbumId"] = albumId;
 
-            using (var context = new RunesDbContext())
+            var name = ((ISet<string>)this.Request.FormData["name"]).FirstOrDefault();
+            var link = ((ISet<string>)this.Request.FormData["link"]).FirstOrDefault();
+            var price = ((ISet<string>)this.Request.FormData["price"]).FirstOrDefault();
+
+            var trackFromDb = new Track
             {
-                this.ViewData["AlbumId"] = albumId;
+                Name = name,
+                Link = link,
+                Price = decimal.Parse(price)
+            };
 
-                var currentAlbum = context.Albums
-                    .FirstOrDefault(album => album.Id == albumId);
-
-                var name = ((ISet<string>)httpRequest.FormData["name"]).FirstOrDefault();
-                var link = ((ISet<string>)httpRequest.FormData["link"]).FirstOrDefault();
-                var price = ((ISet<string>)httpRequest.FormData["price"]).FirstOrDefault();
-
-                var track = new Track
-                {
-                    Name = name,
-                    Link = link,
-                    Price = decimal.Parse(price)
-                };
-
-                if (track == null)
-                    this.Redirect("/Albums/All");
-
-                currentAlbum.Tracks.Add(track);
-                currentAlbum.Price = currentAlbum.Tracks.Sum(t => t.Price) * 0.87M;
-
-                context.Update(currentAlbum);
-                context.SaveChanges();
-            }
+            if (!this.albumService.AddTrackToAlbum(albumId, trackFromDb))
+                this.Redirect("/Albums/All");
 
             return this.Redirect($"/Albums/Details?id={albumId}");
         }
