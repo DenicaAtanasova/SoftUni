@@ -1,49 +1,52 @@
-﻿namespace SIS.HTTP.Responses
-{
-    using Common;
-    using Cookies;
-    using Enums;
-    using Extensions;
-    using Headers;
-    using System.Text;
+﻿using System.Text;
+using SIS.Common;
+using SIS.HTTP.Common;
+using SIS.HTTP.Cookies;
+using SIS.HTTP.Cookies.Contracts;
+using SIS.HTTP.Enums;
+using SIS.HTTP.Extensions;
+using SIS.HTTP.Headers;
 
+namespace SIS.HTTP.Responses
+{
     public class HttpResponse : IHttpResponse
     {
-        private readonly IHttpHeaderCollection headers;
-        private readonly IHttpCookieCollection cookies;
-
         public HttpResponse()
         {
-            this.headers = new HttpHeaderCollection();
-            this.cookies = new HttpCookieCollection();
+            this.Headers = new HttpHeaderCollection();
+            this.Cookies = new HttpCookieCollection();
             this.Content = new byte[0];
         }
 
         public HttpResponse(HttpResponseStatusCode statusCode) : this()
         {
-            CoreValidator.ThrowIfNull(statusCode, nameof(statusCode));
+            statusCode.ThrowIfNull(nameof(statusCode));
             this.StatusCode = statusCode;
         }
 
         public HttpResponseStatusCode StatusCode { get; set; }
 
+        public IHttpHeaderCollection Headers { get; }
+
+        public IHttpCookieCollection Cookies { get; }
+
         public byte[] Content { get; set; }
 
         public void AddHeader(HttpHeader header)
         {
-            this.headers.AddHeader(header);
+            this.Headers.AddHeader(header);
         }
 
         public void AddCookie(HttpCookie cookie)
         {
-            this.cookies.AddCookie(cookie);
+            this.Cookies.AddCookie(cookie);
         }
 
         public byte[] GetBytes()
         {
-            var httpResponseBytesWithoutBody = Encoding.UTF8.GetBytes(this.ToString());
+            byte[] httpResponseBytesWithoutBody = Encoding.UTF8.GetBytes(this.ToString());
 
-            var httpResponseBytesWithBody = new byte[httpResponseBytesWithoutBody.Length + this.Content.Length];
+            byte[] httpResponseBytesWithBody = new byte[httpResponseBytesWithoutBody.Length + this.Content.Length];
 
             for (int i = 0; i < httpResponseBytesWithoutBody.Length; i++)
             {
@@ -60,17 +63,16 @@
 
         public override string ToString()
         {
-
-            var result = new StringBuilder();
+            StringBuilder result = new StringBuilder();
 
             result
                 .Append($"{GlobalConstants.HttpOneProtocolFragment} {this.StatusCode.GetStatusLine()}")
                 .Append(GlobalConstants.HttpNewLine)
-                .Append($"{this.headers}").Append(GlobalConstants.HttpNewLine);
+                .Append($"{this.Headers}").Append(GlobalConstants.HttpNewLine);
 
-            if (this.cookies.HasCookies())
+            if (this.Cookies.HasCookies())
             {
-                result.Append($"{this.cookies}").Append(GlobalConstants.HttpNewLine);
+                result.Append($"{this.Cookies}").Append(GlobalConstants.HttpNewLine);
             }
 
             result.Append(GlobalConstants.HttpNewLine);

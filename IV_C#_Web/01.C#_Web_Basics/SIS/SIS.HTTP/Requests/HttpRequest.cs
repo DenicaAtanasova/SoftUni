@@ -1,24 +1,27 @@
-﻿namespace SIS.HTTP.Requests
-{
-    using Common;
-    using Cookies;
-    using Enums;
-    using Exceptions;
-    using Headers;
-    using Sessions;
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Web;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net;
+using System.Web;
+using SIS.Common;
+using SIS.HTTP.Common;
+using SIS.HTTP.Cookies;
+using SIS.HTTP.Cookies.Contracts;
+using SIS.HTTP.Enums;
+using SIS.HTTP.Exceptions;
+using SIS.HTTP.Headers;
+using SIS.HTTP.Sessions;
 
+namespace SIS.HTTP.Requests
+{
     public class HttpRequest : IHttpRequest
     {
         public HttpRequest(string requestString)
         {
-            CoreValidator.ThrowIfNullOrEmpty(requestString, nameof(requestString));
+            requestString.ThrowIfNullOrEmpty(nameof(requestString));
 
-            this.FormData = new Dictionary<string,object>();
-            this.QueryData = new Dictionary<string, object>();
+            this.FormData = new Dictionary<string, ISet<string>>();
+            this.QueryData = new Dictionary<string, ISet<string>>();
             this.Headers = new HttpHeaderCollection();
             this.Cookies = new HttpCookieCollection();
 
@@ -29,9 +32,9 @@
 
         public string Url { get; private set; }
 
-        public Dictionary<string, object> FormData { get; }
+        public Dictionary<string, ISet<string>> FormData { get; }
 
-        public Dictionary<string, object> QueryData { get; }
+        public Dictionary<string, ISet<string>> QueryData { get; }
 
         public IHttpHeaderCollection Headers { get; }
 
@@ -54,7 +57,7 @@
 
         private bool IsValidRequestQueryString(string queryString, string[] queryParameters)
         {
-            CoreValidator.ThrowIfNullOrEmpty(queryString, nameof(queryString));
+            queryString.ThrowIfNullOrEmpty(nameof(queryString));
 
             return true; //TODO: REGEX QUERY STRING
         }
@@ -77,11 +80,17 @@
 
         private void ParseRequestMethod(string[] requestLineParams)
         {
-            var isValidRequestMethod = Enum.TryParse<HttpRequestMethod>(requestLineParams[0], true, out var requestMethod);
-            if (!isValidRequestMethod)
-                throw new BadRequestException(string.Format(GlobalConstants.UnsupportedHttpMethodExceptionMessage, requestLineParams[0]));
+            bool parseResult = HttpRequestMethod.TryParse(requestLineParams[0], true,
+                out HttpRequestMethod method);
 
-            this.RequestMethod = requestMethod;
+            if (!parseResult)
+            {
+                throw new BadRequestException(
+                    string.Format(GlobalConstants.UnsupportedHttpMethodExceptionMessage,
+                        requestLineParams[0]));
+            }
+
+            this.RequestMethod = method;
         }
 
         private void ParseRequestUrl(string[] requestLineParams)
@@ -106,12 +115,20 @@
         {
             if (this.HasQueryString())
             {
-                this.Url.Split('?', '#')[1]
+                var parameters = this.Url.Split('?', '#')[1]
                     .Split('&')
                     .Select(plainQueryParameter => plainQueryParameter.Split('='))
-                    .ToList()
-                    .ForEach(queryParameterKeyValuePair =>
-                        this.QueryData.Add(queryParameterKeyValuePair[0], queryParameterKeyValuePair[1]));
+                    .ToList();
+
+                foreach (var parameter in parameters)
+                {
+                    if (!this.QueryData.ContainsKey(parameter[0]))
+                    {
+                        this.QueryData.Add(parameter[0], new HashSet<string>());
+                    }
+
+                    this.QueryData[parameter[0]].Add(WebUtility.UrlDecode(parameter[1]));
+                }
             }
         }
 
@@ -135,7 +152,7 @@
                         this.FormData.Add(key, new HashSet<string>());
                     }
 
-                    ((ISet<string>)this.FormData[key]).Add(value);
+                    this.FormData[key].Add(WebUtility.UrlDecode(value));
                 }                
             }
         }
@@ -148,19 +165,20 @@
 
         private void ParseCookies()
         {
-            if (!this.Headers.ContainsHeader(HttpHeader.Cookie))
-                return;
-
-            var cookiesString = this.Headers.GetHeader(HttpHeader.Cookie).Value;
-            var unparsedCookies = cookiesString.Split(new[] { "; " }, StringSplitOptions.RemoveEmptyEntries);
-
-            foreach (string unparsedCookie in unparsedCookies)
+            if (this.Headers.ContainsHeader(HttpHeader.Cookie))
             {
-                var cookieKeyValuePair = unparsedCookie.Split(new[] { '=' }, 2);
+                string value = this.Headers.GetHeader(HttpHeader.Cookie).Value;
+                string[] unparsedCookies = value.Split(new[] { "; " }, StringSplitOptions.RemoveEmptyEntries);
 
-                var httpCookie = new HttpCookie(cookieKeyValuePair[0], cookieKeyValuePair[1], false);
+                foreach (string unparsedCookie in unparsedCookies)
+                {
+                    string[] cookieKeyValuePair = unparsedCookie.Split(new[] { '=' }, 2);
 
-                this.Cookies.AddCookie(httpCookie);
+                    HttpCookie httpCookie = new HttpCookie(cookieKeyValuePair[0]
+                        , cookieKeyValuePair[1], false);
+
+                    this.Cookies.AddCookie(httpCookie);
+                }
             }
         }
 
@@ -173,7 +191,9 @@
                 .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
 
             if (!this.IsValidRequestLine(requestLineParams))
+            {
                 throw new BadRequestException();
+            }
 
             this.ParseRequestMethod(requestLineParams);
             this.ParseRequestUrl(requestLineParams);

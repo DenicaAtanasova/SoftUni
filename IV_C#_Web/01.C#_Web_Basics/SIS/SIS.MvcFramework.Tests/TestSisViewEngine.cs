@@ -1,15 +1,17 @@
-﻿namespace SIS.MvcFramework.Tests
-{
-    using SIS.MvcFramework.ViewEngine;
-    using System.Collections.Generic;
-    using System.IO;
-    using Xunit;
+﻿using SIS.MvcFramework.ViewEngine;
 
+using System.Collections.Generic;
+using System.IO;
+
+using Xunit;
+
+namespace SIS.MvcFramework.Tests
+{
     public class TestSisViewEngine
     {
         [Theory]
         [InlineData("TestWithoutCSharpCode")]
-        [InlineData("UseForForechAndIf")]
+        [InlineData("UseForForeachAndIf")]
         [InlineData("UseModelData")]
         public void TestGetHtml(string testFileName)
         {
@@ -23,11 +25,9 @@
             var actualResult = viewEngine.GetHtml<object>(viewContent, new TestViewModel()
             {
                 StringValue = "str",
-                ListValues = new List<string> { "123", "val1", string.Empty}
-            },
-            new Identity.Principal() { });
-
-            Assert.Equal(expectedResult, actualResult);
+                ListValues = new List<string> { "123", "val1", string.Empty },
+            }, new Identity.Principal() { });
+            Assert.Equal(expectedResult.TrimEnd(), actualResult.TrimEnd());
         }
     }
 }
