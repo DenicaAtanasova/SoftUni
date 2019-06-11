@@ -1,25 +1,31 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using SIS.HTTP.Enums;
-using SIS.HTTP.Requests;
-using SIS.HTTP.Responses;
-using SIS.MvcFramework.Attributes;
-using SIS.MvcFramework.Attributes.Action;
-using SIS.MvcFramework.Attributes.Security;
-using SIS.MvcFramework.DependencyContainer;
-using SIS.MvcFramework.Logging;
-using SIS.MvcFramework.Result;
-using SIS.MvcFramework.Routing;
-using SIS.MvcFramework.Sessions;
-using IServiceProvider = SIS.MvcFramework.DependencyContainer.IServiceProvider;
-
-namespace SIS.MvcFramework
+﻿namespace SIS.MvcFramework
 {
+    using System;
+    using System.Collections;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Reflection;
+
+    using HTTP.Enums;
+    using HTTP.Requests;
+    using HTTP.Responses;
+
+    using Attributes;
+    using Attributes.Action;
+    using Attributes.Security;
+    using Attributes.Validation;
+    using DependencyContainer;
+    using Logging;
+    using Result;
+    using Routing;
+    using Sessions;
+    using Validation;
+    using IServiceProvider = DependencyContainer.IServiceProvider;
+
     public static class WebHost
     {
+        private static readonly IControllerState controllerState = new ControllerState();
+
         public static void Start(IMvcApplication application)
         {
             IServerRoutingTable serverRoutingTable = new ServerRoutingTable();
@@ -88,6 +94,7 @@ namespace SIS.MvcFramework
             IHttpRequest request)
         {
             var controllerInstance = serviceProvider.CreateInstance(controllerType) as Controller;
+            controllerState.SetState(controllerInstance);
             controllerInstance.Request = request;
 
             // Security Authorization - TODO: Refactor this
@@ -157,12 +164,45 @@ namespace SIS.MvcFramework
                         }
                     }
 
+                    if (request.RequestMethod == HttpRequestMethod.Post)
+                    {
+                        controllerState.Reset();
+                        controllerInstance.ModelState = ValidateObject(paramaterValue);
+                        controllerState.Initialize(controllerInstance);
+                    }
+
                     parameterValues.Add(paramaterValue);
                 }
             }
 
             var response = action.Invoke(controllerInstance, parameterValues.ToArray()) as ActionResult;
             return response;
+        }
+
+        private static ModelStateDictionary ValidateObject(object value)
+        {
+            var modelState = new ModelStateDictionary();
+
+            var objectProperties = value.GetType().GetProperties();
+
+            foreach (var objectProperty in objectProperties)
+            {
+                var validationAttributes = objectProperty
+                    .GetCustomAttributes()
+                    .Where(type => type is ValidationSisAttribute)
+                    .Cast<ValidationSisAttribute>()
+                    .ToList();
+
+                foreach (var validationAttribute in validationAttributes)
+                {
+                    if (validationAttribute.IsValid(objectProperty.GetValue(value)))
+                        continue;
+
+                    modelState.Add(objectProperty.Name, validationAttribute.ErrorMessage);
+                }
+            }
+
+            return modelState;
         }
 
         private static ISet<string> TryGetHttpParameter(IHttpRequest request, string parameterName)

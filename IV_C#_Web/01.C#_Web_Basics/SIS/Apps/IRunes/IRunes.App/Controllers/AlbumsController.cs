@@ -1,16 +1,16 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using IRunes.App.ViewModels;
-using IRunes.Models;
-using IRunes.Services;
-using SIS.MvcFramework;
-using SIS.MvcFramework.Attributes;
-using SIS.MvcFramework.Attributes.Security;
-using SIS.MvcFramework.Mapping;
-using SIS.MvcFramework.Result;
-
-namespace IRunes.App.Controllers
+﻿namespace IRunes.App.Controllers
 {
+    using System.Collections.Generic;
+    using System.Linq;
+    using ViewModels.Albums;
+    using Models;
+    using Services;
+    using SIS.MvcFramework;
+    using SIS.MvcFramework.Attributes;
+    using SIS.MvcFramework.Attributes.Security;
+    using SIS.MvcFramework.Mapping;
+    using SIS.MvcFramework.Result;
+
     public class AlbumsController : Controller
     {
         private readonly IAlbumService albumService;
@@ -22,7 +22,7 @@ namespace IRunes.App.Controllers
         }
 
         [Authorize]
-        public ActionResult All()
+        public IActionResult All()
         {
             ICollection<Album> allAlbums = this.albumService.GetAllAlbums();
 
@@ -35,21 +35,19 @@ namespace IRunes.App.Controllers
         }
 
         [Authorize]
-        public ActionResult Create()
+        public IActionResult Create()
         {
             return this.View();
         }
 
         [Authorize]
         [HttpPost]
-        public ActionResult Create(string name, string cover)
+        public IActionResult Create(AlbumCreateInputModel model)
         {
-            Album album = new Album
-            {
-                Name = name,
-                Cover = cover,
-                Price = 0M
-            };
+            if (!this.ModelState.IsValid)
+                return this.Redirect("/Albums/Create");
+
+            Album album = ModelMapper.ProjectTo<Album>(model);
 
             this.albumService.CreateAlbum(album);
 
@@ -57,7 +55,7 @@ namespace IRunes.App.Controllers
         }
 
         [Authorize]
-        public ActionResult Details(string id)
+        public IActionResult Details(string id)
         {
             Album albumFromDb = this.albumService.GetAlbumById(id);
 

@@ -1,12 +1,13 @@
-﻿using System.Runtime.CompilerServices;
-using SIS.HTTP.Requests;
-using SIS.MvcFramework.Extensions;
-using SIS.MvcFramework.Identity;
-using SIS.MvcFramework.Result;
-using SIS.MvcFramework.ViewEngine;
-
-namespace SIS.MvcFramework
+﻿namespace SIS.MvcFramework
 {
+    using System.Runtime.CompilerServices;
+    using HTTP.Requests;
+    using Extensions;
+    using Identity;
+    using Result;
+    using Validation;
+    using ViewEngine;
+
     public abstract class Controller
     {
         private readonly IViewEngine viewEngine;
@@ -14,6 +15,7 @@ namespace SIS.MvcFramework
         protected Controller()
         {
             this.viewEngine = new SisViewEngine();
+            this.ModelState = new ModelStateDictionary();
         }
 
         // TODO: Refactor this
@@ -23,6 +25,8 @@ namespace SIS.MvcFramework
             : null;
 
         public IHttpRequest Request { get; set; }
+
+        public ModelStateDictionary ModelState { get; set; }
 
         protected bool IsLoggedIn()
         {
@@ -44,12 +48,12 @@ namespace SIS.MvcFramework
             this.Request.Session.ClearParameters();
         }
 
-        protected ActionResult View([CallerMemberName] string view = null)
+        protected IActionResult View([CallerMemberName] string view = null)
         {
             return this.View<object>(null, view);
         }
 
-        protected ActionResult View<T>(T model = null, [CallerMemberName] string view = null)
+        protected IActionResult View<T>(T model = null, [CallerMemberName] string view = null)
             where T : class
         {
             // TODO: Support for layout
@@ -57,37 +61,37 @@ namespace SIS.MvcFramework
             string viewName = view;
 
             string viewContent = System.IO.File.ReadAllText("Views/" + controllerName + "/" + viewName + ".html");
-            viewContent = this.viewEngine.GetHtml(viewContent, model, this.User);
+            viewContent = this.viewEngine.GetHtml(viewContent, model, this.ModelState, this.User);
 
             string layoutContent = System.IO.File.ReadAllText("Views/_Layout.html");
-            layoutContent = this.viewEngine.GetHtml(layoutContent, model, this.User);
+            layoutContent = this.viewEngine.GetHtml(layoutContent, model, this.ModelState, this.User);
             layoutContent = layoutContent.Replace("@RenderBody()", viewContent);
 
             var htmlResult = new HtmlResult(layoutContent);
             return htmlResult;
         }
 
-        protected ActionResult Redirect(string url)
+        protected IActionResult Redirect(string url)
         {
             return new RedirectResult(url);
         }
 
-        protected ActionResult Xml(object obj)
+        protected IActionResult Xml(object obj)
         {
             return new XmlResult(obj.ToXml());
         }
 
-        protected ActionResult Json(object obj)
+        protected IActionResult Json(object obj)
         {
             return new JsonResult(obj.ToJson());
         }
 
-        protected ActionResult File(byte[] fileContent)
+        protected IActionResult File(byte[] fileContent)
         {
             return new FileResult(fileContent);
         }
 
-        protected ActionResult NotFound(string message = "")
+        protected IActionResult NotFound(string message = "")
         {
             return new NotFoundResult(message);
         }

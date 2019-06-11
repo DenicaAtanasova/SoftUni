@@ -1,14 +1,15 @@
-﻿using System.Security.Cryptography;
-using System.Text;
-using IRunes.Models;
-using IRunes.Services;
-using SIS.MvcFramework;
-using SIS.MvcFramework.Attributes;
-using SIS.MvcFramework.Attributes.Action;
-using SIS.MvcFramework.Result;
-
-namespace IRunes.App.Controllers
+﻿namespace IRunes.App.Controllers
 {
+    using System.Security.Cryptography;
+    using System.Text;
+    using ViewModels.Users;
+    using Models;
+    using Services;
+    using SIS.MvcFramework;
+    using SIS.MvcFramework.Attributes;
+    using SIS.MvcFramework.Attributes.Action;
+    using SIS.MvcFramework.Result;
+
     public class UsersController : Controller
     {
         private readonly IUserService userService;
@@ -27,15 +28,15 @@ namespace IRunes.App.Controllers
             }
         }
 
-        public ActionResult Login()
+        public IActionResult Login()
         {
             return this.View();
         }
 
         [HttpPost]
-        public ActionResult Login(string username, string password)
+        public IActionResult Login(UserLoginInputModel model)
         {
-            User userFromDb = this.userService.GetUserByUsernameAndPassword(username, this.HashPassword(password));
+            User userFromDb = this.userService.GetUserByUsernameAndPassword(model.Username, this.HashPassword(model.Password));
 
             if (userFromDb == null)
             {
@@ -47,24 +48,24 @@ namespace IRunes.App.Controllers
             return this.Redirect("/");
         }
 
-        public ActionResult Register()
+        public IActionResult Register()
         {
             return this.View();
         }
 
         [HttpPost]
-        public ActionResult Register(string username, string password, string confirmPassword, string email)
+        public IActionResult Register(UserRegisterInputModel model)
         {
-            if (password != confirmPassword)
+            if (!this.ModelState.IsValid || model.Password != model.ConfirmPassword)
             {
                 return this.Redirect("/Users/Register");
             }
 
             User user = new User
             {
-                Username = username,
-                Password = this.HashPassword(password),
-                Email = email
+                Username = model.Username,
+                Password = this.HashPassword(model.Password),
+                Email = model.Email
             };
 
             this.userService.CreateUser(user);
@@ -72,7 +73,7 @@ namespace IRunes.App.Controllers
             return this.Redirect("/Users/Login");
         }
 
-        public ActionResult Logout()
+        public IActionResult Logout()
         {
             this.SignOut();
 
