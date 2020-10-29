@@ -47,3 +47,11 @@ Using SQL queries modify table Users. Make the default value of LastLoginTime fi
 
 ### 12. Set Unique Filed
 Using SQL queries modify table Users. Remove Username field from the primary key so only the field Id would be primary key. Now add unique constraint to the Username field to ensure that the values there are at least 3 symbols long.
+
+### 13. Movie Database
+Using SQL queries create Movies database with the following entities:
+* **DIrectors** – (Id, DirectorName, Notes);
+* **Genres** – (Id, GenreName, Notes);
+* **Categories** – (Id, CategoryName, Notes);
+* **Movies** – (Id, Title, DirectorId, CopyrightYear, Length, GenreId, CategoryId, Rating, Notes);
+Set most appropriate data types for each column. Set primary key to each table. Make sure the columns that are present in 2 tables would be of the same data type. Consider which fields are always required and which are optional. Submit your CREATE TABLE and INSERT statements as Run queries & check DB.
