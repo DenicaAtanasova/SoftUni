@@ -53,7 +53,7 @@ Using SQL queries create Movies database with the following entities:
 * **Directors** – (Id, DirectorName, Notes);
 * **Genres** – (Id, GenreName, Notes);
 * **Categories** – (Id, CategoryName, Notes);
-* **Movies** – (Id, Title, DirectorId, CopyrightYear, Length, GenreId, CategoryId, Rating, Notes);
+* **Movies** – (Id, Title, DirectorId, CopyrightYear, Length, GenreId, CategoryId, Rating, Notes);  
 Set most appropriate data types for each column. Set primary key to each table. Make sure the columns that are present in 2 tables would be of the same data type. Consider which fields are always required and which are optional.
 
 ### 14. Car Rental Database
@@ -62,5 +62,17 @@ Using SQL queries create CarRental database with the following entities:
 * **Cars** - (Id, PlateNumber, Manufacturer, Model, CarYear, CategoryId, Doors, Picture, Condition, Available);
 * **Employees** - (Id, FirstName, LastName, Title, Notes);
 * **Customers** - (Id, DriverLicenceNumber, FullName, Address, City, ZIPCode, Notes);
-* **RentalOrders** - (Id, EmployeeId, CustomerId, CarId, TankLevel, KilometrageStart, KilometrageEnd, TotalKilometrage, StartDate, EndDate, TotalDays, RateApplied, TaxRate, OrderStatus, Notes);
+* **RentalOrders** - (Id, EmployeeId, CustomerId, CarId, TankLevel, KilometrageStart, KilometrageEnd, TotalKilometrage, StartDate, EndDate, TotalDays, RateApplied, TaxRate, OrderStatus, Notes);  
+Set most appropriate data types for each column. Set primary key to each table. Make sure the columns that are present in 2 tables would be of the same data type. Consider which fields are always required and which are optional.
+
+### 15. Hotel Database
+Using SQL queries create Hotel database with the following entities:
+* **Employees** - (Id, FirstName, LastName, Title, Notes);
+* **Customers** - (AccountNumber, FirstName, LastName, PhoneNumber, EmergencyName, EmergencyNumber, Notes);
+* **RoomStatus** - (RoomStatus, Notes);
+* **RoomType** - (RoomStatus, Notes);
+* **BedType** - (BedType, Notes);
+* **Rooms** - (RoomNumber, RoomType, BedType, Rate, RoomStatus, Notes);
+* **Pyments** - (Id, EmployeeId, PaymentDate, AccountNumber, FirstDateOccupied, LastDateOccupied, TotalDays, AmountCharged, TaxRate, TaxAmount, PaymentTotal, Notes);
+* **Occupancies** - (Id, EmployeeId, DateOccupied, AccountNumber, RoomNumber, RateApplied, PhoneCharge, Notes).  
 Set most appropriate data types for each column. Set primary key to each table. Make sure the columns that are present in 2 tables would be of the same data type. Consider which fields are always required and which are optional.

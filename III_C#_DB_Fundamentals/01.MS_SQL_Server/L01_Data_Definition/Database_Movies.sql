@@ -34,7 +34,7 @@ CREATE TABLE Movies(
 	[Length] DECIMAL(15,2),
 	GenreId INT NOT NULL,
 	CategoryId INT NOT NULL,
-	Rating INT,
+	Rating DECIMAL(10, 2),
 	Notes NVARCHAR(MAX),
 
 	CONSTRAINT PK_Movie PRIMARY KEY(Id),

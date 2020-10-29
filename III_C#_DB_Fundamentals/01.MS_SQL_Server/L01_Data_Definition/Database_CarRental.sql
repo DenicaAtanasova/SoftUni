@@ -63,7 +63,7 @@ CREATE TABLE RentalOrders(
 	StartDate DATE NOT NULL,
 	EndDate DATE NOT NULL,
 	TotalDays AS DATEDIFF(DAY, StartDate, EndDate),
-	RateApplied DECIMAL(3,2),
+	RateApplied DECIMAL(10,2),
 	TaXRate DECIMAL(10,2),
 	OrderStatus VARCHAR(20),
 	Notes NVARCHAR(MAX),
