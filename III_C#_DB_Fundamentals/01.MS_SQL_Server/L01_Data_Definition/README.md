@@ -19,22 +19,22 @@ Delete all the data from the Minions table using SQL query.
 Delete all tables from the Minions database using SQL query.
 
 ### 7. Create Table People
-* [Id] – unique number for every person there will be no more than 231-1 people. (Auto incremented);
-* [Name] – full name of the person will be no more than 200 Unicode characters. (Not null);
-* [Picture] - image with size up to 2 MB. (Allow nulls);
-* [Height] – In meters. Real number precise up to 2 digits after floating point. (Allow nulls);
-* [Weight] - In kilograms. Real number precise up to 2 digits after floating point. (Allow nulls);
-* [Gender] - Possible states are m or f. (Not null);
-* [Birthdate] - (Not null);
-* [Biography] - detailed biography of the person it can contain max allowed Unicode characters. (Allow nulls).
+* **Id** – unique number for every person there will be no more than 231-1 people. (Auto incremented);
+* **Name** – full name of the person will be no more than 200 Unicode characters. (Not null);
+* **Picture** - image with size up to 2 MB. (Allow nulls);
+* **Height** – In meters. Real number precise up to 2 digits after floating point. (Allow nulls);
+* **Weight** - In kilograms. Real number precise up to 2 digits after floating point. (Allow nulls);
+* **Gender** - Possible states are m or f. (Not null);
+* **Birthdate** - (Not null);
+* **Biography** - detailed biography of the person it can contain max allowed Unicode characters. (Allow nulls).
 
 ### 8. Create Table Users
-* [Id] – unique number for every user. There will be no more than 263-1 users. (Auto incremented);
-* [Username] – unique identifier of the user will be no more than 30 characters (non Unicode). (Required);
-* [Password] - password will be no longer than 26 characters (non Unicode). (Required);
-* [ProfilePicture] – image with size up to 900 KB;
-* [LastLoginTime]
-* [IsDeleted] - shows if the user deleted his/her profile. Possible states are true or false.
+* **Id** – unique number for every user. There will be no more than 263-1 users. (Auto incremented);
+* **Username** – unique identifier of the user will be no more than 30 characters (non Unicode). (Required);
+* **Password** - password will be no longer than 26 characters (non Unicode). (Required);
+* **ProfilePicture** – image with size up to 900 KB;
+* **LastLoginTime**
+* **IsDeleted** - shows if the user deleted his/her profile. Possible states are true or false.
 
 ### 9. Change Primary Key
 Using SQL queries modify table Users from the previous task. First remove current primary key then create new primary key that would be the combination of fields Id and Username.
