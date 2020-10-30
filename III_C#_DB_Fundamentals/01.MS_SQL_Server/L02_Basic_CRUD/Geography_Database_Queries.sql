@@ -11,7 +11,7 @@ FROM Countries
 WHERE ContinentCode = 'EU'
 ORDER BY [Population] DESC;
 
--- Problem 21
+-- Problem 23
 SELECT CountryName, ContinentCode, 
 	CASE [CurrencyCode]  
 	WHEN 'EUR' THEN 'Euro'
