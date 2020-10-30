@@ -1,3 +1,6 @@
+USE SoftUni
+GO
+
 -- Problem 1
 SELECT * FROM Departments;
 
@@ -96,11 +99,3 @@ WHERE DepartmentID IN(
 );
 
 SELECT Salary FROM Employees;
-
--- Problem 21
-
--- Problem 22
-
--- Problem 23
-
--- Problem 24
