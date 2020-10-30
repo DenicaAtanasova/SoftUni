@@ -56,6 +56,3 @@ Find all games with part of the day and duration sorted by game name alphabetica
 
 ### 16. Orders Table
 You are given a table Orders(Id, ProductName, OrderDate) filled with data. Consider that the payment for that order must be accomplished within 3 days after the order date. Also the delivery date is up to 1 month. Write a query to show each product’s name, order date, pay and deliver due dates. 
-
-### 17. People Table
-Create a table People(Id, Name, Birthdate). Write a query to find age in years, months, days and minutes for each person for the current time of executing the query.
