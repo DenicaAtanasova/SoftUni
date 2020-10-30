@@ -20,5 +20,10 @@ Insert the data from the example above. Add primary keys and foreign keys. The f
 
 ### 5. Online Store Database
 Create a new database and design the following structure:
-![alt text](https://github.com/DenicaAtanasova/SoftUni/tree/master/III_C%23_DB_Fundamentals/01.MS_SQL_Server/L05_Table_Relations/Store_Database_Diagram.png "Store Database Diagram")  
-* [Store Database Diagram](./L05_Table_Relations/Store_Database_Diagram.png)
+![alt text](https://github.com/DenicaAtanasova/SoftUni/blob/master/III_C%23_DB_Fundamentals/01.MS_SQL_Server/L05_Table_Relations/Store_Database_Diagram.png "Store Database Diagram")
+[Store Database Diagram](./Store_Database_Diagram.png)
+
+### 6. University Database
+Create a new database and design the following structure:
+![alt text](https://github.com/DenicaAtanasova/SoftUni/blob/master/III_C%23_DB_Fundamentals/01.MS_SQL_Server/L05_Table_Relations/University_Database_Diagram.png "University Database Diagram")
+[Store Database Diagram](./University_Database_Diagram.png)
