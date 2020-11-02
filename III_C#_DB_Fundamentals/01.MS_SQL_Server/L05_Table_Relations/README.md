@@ -2,21 +2,27 @@
 
 ### 1. One-To-One Relationship
 Create two tables as follows. Use appropriate data types.
-Insert the data from the example above.
+* **Persons** - (PersonID, FristName, Salary, PassportID)
+* **Passports** - (PassportID, PassportNumber)   
 Alter the customers table and make PersonID a primary key. Create a foreign key between Persons and Passports by using PassportID column.
 
 ### 2. One-To-Many Relationship
 Create two tables as follows. Use appropriate data types.
-Insert the data from the example above. Add primary keys and foreign keys.
+* **Models** - (ModelID, Name, ManufacturerID)
+* **Manufacturers** - (ManufacturerID, Name, EstablishedOn)  
+Add primary keys and foreign keys.
 
 ### 3. Many-To-Many Relationship
 Create three tables as follows. Use appropriate data types.
-Insert the data from the example above.
+* **Students** - (StudentID, Name)
+* **Exams** - (ExamID, Name)
+* **StudentsExams** - (StudentID, ExamID)  
 Add primary keys and foreign keys. Have in mind that table StudentsExams should have a composite primary key.
 
 ### 4. Self-Referencing
-SCreate a single table as follows. Use appropriate data types.  
-Insert the data from the example above. Add primary keys and foreign keys. The foreign key should be between ManagerId and TeacherId.
+Create a single table as follows. Use appropriate data types.  
+* **Teachers** - (TeacherID, Name, ManagerID)  
+Add primary keys and foreign keys. The foreign key should be between ManagerId and TeacherId.
 
 ### 5. Online Store Database
 Create a new database and design the following structure:
