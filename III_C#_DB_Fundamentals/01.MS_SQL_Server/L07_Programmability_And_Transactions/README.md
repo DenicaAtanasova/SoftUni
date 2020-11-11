@@ -57,7 +57,7 @@ You are given a database "Diablo" holding users, games, items, characters and st
 Important: start with a clean copy of the "Diablo" database on each problem. Just execute the SQL script again.
 
 ### 13. Scalar Function: Cash in User Games Odd Rows
-Create a function ufn_CashInUsersGames that sums the cash of odd rows. Rows must be ordered by cash in descending order. The function should take a game name as a parameter and return the result as table. Submit only your function in.
+Create a function ufn_CashInUsersGames that sums the cash of odd rows. Rows must be ordered by cash in descending order. The function should take a game name as a parameter and return the result as table.  
 Execute the function over the following game names, ordered exactly like: “Lily Stargazer”, “Love in a mist”.
 ### Hint:
 Use ROW_NUMBER to get the rankings of all rows based on order criteria.
