@@ -163,11 +163,11 @@ GO;
 -- Problem 18
 CREATE OR ALTER PROC usp_TransferMoney(@senderId INT, @receiverId int, @amount DECIMAL(15, 4))
 AS
-BEGIN TRY
-	EXEC dbo.usp_WithdrawMoney @senderId, @amount;
-	EXEC dbo.usp_DepositMoney @receiverId, @amount;
-END TRY
-BEGIN CATCH
-	SELECT ERROR_MESSAGE() AS ErrorMessage
-END CATCH
+BEGIN TRANSACTION
+		EXEC dbo.usp_WithdrawMoney @senderId, @amount;
+		EXEC dbo.usp_DepositMoney @receiverId, @amount;
+
+		IF ERROR_MESSAGE() IS NOT NULL
+			ROLLBACK;
+COMMIT TRANSACTION;
 GO;
