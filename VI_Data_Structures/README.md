@@ -5,4 +5,6 @@
 
 ### 2. Circular Queue
 
-### 3. Tree and Binary Search Tree
+### 3. Tree 
+
+### 4. Binary Tree
