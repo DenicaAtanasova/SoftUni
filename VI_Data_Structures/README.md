@@ -8,3 +8,7 @@
 ### 3. Tree 
 
 ### 4. Binary Tree
+
+### 5. Binary Search Tree
+
+### 6. Heap
